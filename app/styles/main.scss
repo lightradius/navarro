@@ -4,20 +4,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 // endbower
 
 @import "compass";
-
-
-// Testing custom navbar height
-.navbar-nav > li > a, .navbar-brand {
-    padding-top:28px !important; padding-bottom:0 !important;
-    height: 80px;
-}
-button.navbar-toggle.collapsed {
-    margin-top: 23px !important;
-}
-button.navbar-toggle {
-    margin-top: 23px !important;
-}
-.navbar {min-height:80px !important;}
+@import "navbar";
 
 .browsehappy {
   margin: 0.2em 0;
