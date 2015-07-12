@@ -14,10 +14,11 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 }
 
 body {
+  margin-top: 80px;
   padding: 0;
   font-family: 'Open Sans';
   font-weight: 400;
-  background: url("./images/background.png") no-repeat center center; 
+  background: url("./images/background.png") no-repeat center center;
   /* Needed to stop white horizontal strips from showing under the parallax when scrolling up too fast */
 }
 
