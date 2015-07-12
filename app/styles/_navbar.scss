@@ -1,6 +1,8 @@
 // Testing custom navbar height
 .navbar-nav > li > a, .navbar-brand {
-    padding-top:28px !important; padding-bottom:0 !important;
+    padding-top: 28px !important; padding-bottom: 0 !important;
+    padding-left: 28px !important;
+    padding-right: 28px !important;
     height: 80px;
 }
 button.navbar-toggle.collapsed {
@@ -10,6 +12,7 @@ button.navbar-toggle {
     margin-top: 23px !important;
 }
 .navbar {
+  font-family: 'Orbitron';
   border-radius: 0;
   min-height:80px !important;
   }
