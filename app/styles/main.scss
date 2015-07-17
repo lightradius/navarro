@@ -14,13 +14,20 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 }
 
 body {
+  height: 100%;
+  color: white;
   margin-top: 80px;
   padding-top: 20px;
   font-family: 'Open Sans';
   font-size: 1.6em;
   font-weight: 400;
-  background: url("./images/background.png") no-repeat center center;
+  background-color: #a5a5a5;
+  // background: url("../images/background.png") no-repeat center center;
   /* Needed to stop white horizontal strips from showing under the parallax when scrolling up too fast */
+}
+
+h1 {
+  font-family: 'Orbitron';
 }
 
 .brand {
@@ -28,28 +35,6 @@ body {
   font-weight: 400;
   color: white;
 }
-
-/* Everything but the jumbotron gets side spacing for mobile first views */
-// .header,
-// .marketing,
-// .footer {
-//   padding-left: 15px;
-//   padding-right: 15px;
-// }
-
-/* Custom page header */
-// .header {
-//   border-bottom: 1px solid #e5e5e5;
-//   margin-bottom: 10px;
-//
-//   /* Make the masthead heading the same height as the navigation */
-//   h3 {
-//     margin-top: 0;
-//     margin-bottom: 0;
-//     line-height: 40px;
-//     padding-bottom: 19px;
-//   }
-// }
 
 /* Custom page footer */
 .footer {
@@ -76,15 +61,6 @@ body {
 .text-bold {
   font-weight: 900;
   color: orange;
-}
-
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-
-  p + h4 {
-    margin-top: 28px;
-  }
 }
 
 /* Responsive: Portrait tablets and up */
