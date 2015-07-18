@@ -14,21 +14,24 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   padding: 0.2em 0;
 }
 
+#home {
+  background: url("../images/background.png") no-repeat center center;
+}
+
 body {
   height: 100%;
   color: white;
   margin-top: 80px;
-  padding-top: 20px;
   font-family: 'Open Sans';
   font-size: 1.6em;
   font-weight: 400;
-  background-color: #a5a5a5;
-  // background: url("../images/background.png") no-repeat center center;
+  background-color: grey;
   /* Needed to stop white horizontal strips from showing under the parallax when scrolling up too fast */
 }
 
 h1 {
   font-family: 'Orbitron';
+  color: pink;
 }
 
 .brand {
@@ -61,7 +64,7 @@ h1 {
 
 .text-bold {
   font-weight: 900;
-  color: orange;
+  color: pink;
 }
 
 /* Responsive: Portrait tablets and up */

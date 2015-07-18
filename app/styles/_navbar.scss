@@ -14,5 +14,9 @@ button.navbar-toggle {
 .navbar {
   font-family: 'Orbitron';
   border-radius: 0;
+  border: none;
   min-height:80px !important;
+  a:active, a:hover, a:focus {
+    border-bottom: 3px solid pink;
+  }
 }
