@@ -5,6 +5,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 @import "compass";
 @import "navbar";
+@import "footer";
 
 .browsehappy {
   margin: 0.2em 0;
@@ -72,10 +73,10 @@ h1 {
   /* Remove the padding we set earlier */
   .header,
   .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
+  // .footer {
+  //   padding-left: 0;
+  //   padding-right: 0;
+  // }
   /* Space out the masthead */
   .header {
     margin-bottom: 30px;

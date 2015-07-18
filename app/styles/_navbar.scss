@@ -1,7 +1,7 @@
 // Testing custom navbar height
 .navbar-nav > li > a, .navbar-brand {
   padding-top: 28px !important; padding-bottom: 0 !important;
-  // padding-left: 28px !important;
+  padding-left: 28px !important;
   padding-right: 28px !important;
   height: 80px;
 }
