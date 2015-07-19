@@ -40,6 +40,8 @@ angular
   });
 })
 .run(function() {
+  // Running typed to make it available to all controllers
+
   // http://www.mattboldt.com/demos/typed-js/
 
   ! function($) {
