@@ -4,8 +4,12 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 // endbower
 
 @import "compass";
+
+$primary: orange;
+
 @import "navbar";
 @import "footer";
+
 
 .browsehappy {
   margin: 0.2em 0;
@@ -23,22 +27,31 @@ body {
   height: 100%;
   color: white;
   margin-top: 80px;
-  font-family: 'Open Sans';
+  font-family: 'Fontin';
   font-size: 1.6em;
   font-weight: 400;
   background-color: grey;
   /* Needed to stop white horizontal strips from showing under the parallax when scrolling up too fast */
 }
 
+.text-bold {
+  font-weight: 900;
+  color: $primary;
+}
+
 h1 {
   font-family: 'Orbitron';
-  color: pink;
+  color: $primary;
 }
 
 .brand {
   font-family: 'Orbitron';
   font-weight: 400;
   color: white;
+  &>span {
+    font-weight: 900;
+    color: $primary;
+  }
 }
 
 /* Custom page footer */
@@ -61,11 +74,6 @@ h1 {
     font-size: 21px;
     padding: 14px 245px;
   }
-}
-
-.text-bold {
-  font-weight: 900;
-  color: pink;
 }
 
 /* Responsive: Portrait tablets and up */

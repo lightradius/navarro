@@ -17,6 +17,6 @@ button.navbar-toggle {
   border: none;
   min-height:80px !important;
   a:active, a:hover, a:focus {
-    border-bottom: 3px solid pink;
+    border-bottom: 3px solid $primary;
   }
 }
