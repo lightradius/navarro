@@ -9,15 +9,15 @@
 */
 angular.module('navarroApp')
 .controller('HomeCtrl', function ($scope) {
-  $scope.awesomeThings = [
-    'HTML5 Boilerplate',
+  $scope.strings = [
+    'Here be webdevelopment',
     'AngularJS',
     'Karma'
   ];
 
   $(function(){
     $(".typed").typed({
-      strings: $scope.awesomeThings,
+      strings: $scope.strings,
       typeSpeed: 0
     });
   });
