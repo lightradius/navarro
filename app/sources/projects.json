@@ -1,22 +1,12 @@
 [
   {
-    name: "asdasd",
-    url: "adasd",
-    img: "asdds"
+    name: "proverbial",
+    url: "proverbial.site",
+    img: ".png"
   },
   {
-    name: "asdasd",
-    url: "adasd",
-    img: "asdds"
-  },
-  {
-    name: "asdasd",
-    url: "adasd",
-    img: "asdds"
-  },
-  {
-    name: "asdasd",
-    url: "adasd",
-    img: "asdds"
+    name: "skwat",
+    url: "skwat.space",
+    img: ".png"
   }
 ]

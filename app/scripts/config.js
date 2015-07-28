@@ -1,3 +1,5 @@
+/* Angular ui.router */
+
 angular
 .module('navarroApp').config(function ($routeProvider) {
   $routeProvider

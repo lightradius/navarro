@@ -5,7 +5,8 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 @import "compass";
 
-$primary: LightGreen;
+$primary: Pink;
+$secondary: HotPink;
 $background: DimGray;
 
 @import "navbar";
@@ -13,13 +14,13 @@ $background: DimGray;
 
 #home {
   height: 600px;
-  background: url("../images/background.png") no-repeat center center;
+  background: url("../img/background.png") no-repeat center center;
 }
 
 #lead {
-  margin-top: 10%;
   font-size: 24px;
   font-family: 'Monospace';
+  background-color: black;
   a {
     font-size: 32px;
     color: white;

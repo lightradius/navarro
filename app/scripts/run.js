@@ -1,8 +1,7 @@
+/* Running typed in Angular's run block to make it available to all controllers http://www.mattboldt.com/demos/typed-js/ */
+
 angular
 .module('navarroApp').run(function() {
-  // Running typed to make it available to all controllers
-
-  // http://www.mattboldt.com/demos/typed-js/
 
   ! function($) {
 
