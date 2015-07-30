@@ -14,15 +14,17 @@ $background: DimGray;
 
 #home {
   height: 600px;
-  background: url("../img/background.png") no-repeat center center;
+  background: url("../assets/img/background.png") no-repeat center center;
 }
 
 #lead {
-  font-size: 24px;
+  margin-top: 130px;
+  font-size: 20px;
+  padding: 30px;
   font-family: 'Monospace';
   background-color: black;
   a {
-    font-size: 32px;
+    font-size: 24px;
     color: white;
     cursor: default;
     &:hover, &:active {
@@ -34,7 +36,7 @@ $background: DimGray;
 body {
   height: 100%;
   color: white;
-  margin-top: 80px;
+  // margin-top: 80px;
   font-family: 'Ubuntu';
   font-size: 1.6em;
   font-weight: 400;

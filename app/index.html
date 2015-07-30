@@ -23,18 +23,20 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div ng-include src="'views/navbar.html'"></div>
-    <div ng-view=""></div>
-    <div ng-include src="'views/footer.html'"></div>
+    <div ng-include src="'shared/navbar/navbar.html'"></div>
+
+    <div ui-view=""></div>
+    
+    <div ng-include src="'shared/footer/footer.html'"></div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-     <script>
-       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
-       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
-       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
-       }(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-       ga('create', 'UA-XXXXX-X');
-       ga('send', 'pageview');
+    <script>
+      !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+      (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+      r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+      }(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-XXXXX-X');
+      ga('send', 'pageview');
     </script>
 
     <!-- build:js(.) scripts/vendor.js -->
@@ -52,14 +54,14 @@
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
-    <script src="scripts/app.js"></script>
-    <script src="scripts/config.js"></script>
-    <script src="scripts/run.js"></script>
-    <!-- <scirpt src="scripts/other/typed.js"></scirpt> -->
-    <script src="scripts/controllers/about.js"></script>
-    <script src="scripts/controllers/contact.js"></script>
-    <script src="scripts/controllers/home.js"></script>
-    <script src="scripts/controllers/projects.js"></script>
+    <script src="app.js"></script>
+    <script src="config.js"></script>
+    <script src="run.js"></script>
+    <!-- app components -->
+    <script src="components/about/aboutCtrl.js"></script>
+    <script src="components/contact/contactCtrl.js"></script>
+    <script src="components/home/homeCtrl.js"></script>
+    <script src="components/projects/projectsCtrl.js"></script>
     <!-- endbuild -->
 </body>
 </html>
