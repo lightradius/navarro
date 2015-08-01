@@ -9,13 +9,17 @@
 * Main module of the application.
 */
 
-angular
-.module('navarroApp', [
-  'ngAnimate',
-  'ngMessages',
-  'ngResource',
-  'ngRoute',
-  'ngSanitize',
-  'ngTouch',
-  'ui.router'
-]);
+(function() {
+    'use strict';
+
+    angular
+        .module('navarroApp', [
+            'ngAnimate',
+            'ngMessages',
+            'ngResource',
+            'ngRoute',
+            'ngSanitize',
+            'ngTouch',
+            'ui.router'
+        ]);
+})();

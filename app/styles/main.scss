@@ -5,106 +5,115 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 @import "compass";
 
-$primary: Pink;
+$primary: HotPink;
 $secondary: HotPink;
-$background: DimGray;
+$background: #222;
 
 @import "navbar";
 @import "footer";
 
 #home {
-  height: 600px;
-  background: url("../assets/img/background.png") no-repeat center center;
+    height: 800px;
+    // background: url("../assets/img/background.png") no-repeat center center;
+}
+
+.parallax-window {
+    min-height: 800px;
+    background: transparent;
 }
 
 #lead {
-  margin-top: 130px;
-  font-size: 20px;
-  padding: 30px;
-  font-family: 'Monospace';
-  background-color: black;
-  a {
-    font-size: 24px;
-    color: white;
-    cursor: default;
-    &:hover, &:active {
-      text-decoration: none;
+    margin-top: 130px;
+    font-size: 20px;
+    padding: 30px;
+    font-family: 'Monospace';
+    background-color: black;
+    a {
+        font-size: 24px;
+        color: white;
+        cursor: default;
+        &:hover, &:active {
+            text-decoration: none;
+        }
     }
-  }
+}
+
+#three-eyed-snake  {
+    height: 1000px;
 }
 
 body {
-  height: 100%;
-  color: white;
-  // margin-top: 80px;
-  font-family: 'Ubuntu';
-  font-size: 1.6em;
-  font-weight: 400;
-  background-color: $background;
-  /* Needed to stop white horizontal strips from showing under the parallax when scrolling up too fast */
+    height: 100%;
+    color: white;
+    // margin-top: 80px;
+    font-family: 'Open Sans';
+    font-size: 1.8em;
+    font-weight: 100;
+    background-color: $background;
+    /* Needed to stop white horizontal strips from showing under the parallax when scrolling up too fast */
 }
 
 .text-bold {
-  font-weight: 900;
-  color: $primary;
+    font-weight: 900;
+    color: $primary;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Orbitron';
-  color: $primary;
+    font-family: 'Orbitron';
+    color: $primary;
 }
 
 .brand {
-  font-family: 'Orbitron';
-  font-weight: 400;
-  color: white;
-  &>span {
-    font-weight: 900;
-    color: $primary;
-  }
+    font-family: 'Orbitron';
+    font-weight: 400;
+    color: white;
+    &>span {
+        font-weight: 900;
+        color: $primary;
+    }
 }
 
 /* Custom page footer */
 .footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
+    padding-top: 19px;
+    color: #777;
+    border-top: 1px solid #e5e5e5;
 }
 
 .container-narrow > hr {
-  margin: 30px 0;
+    margin: 30px 0;
 }
 
 /* Main marketing message and sign up button */
 .jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
 
-  .btn {
-    font-size: 21px;
-    padding: 14px 245px;
-  }
+    .btn {
+        font-size: 21px;
+        padding: 14px 245px;
+    }
 }
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
+    .container {
+        max-width: 730px;
+    }
 
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  // .footer {
-  //   padding-left: 0;
-  //   padding-right: 0;
-  // }
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
+    /* Remove the padding we set earlier */
+    .header,
+    .marketing,
+    // .footer {
+    //   padding-left: 0;
+    //   padding-right: 0;
+    // }
+    /* Space out the masthead */
+    .header {
+        margin-bottom: 30px;
+    }
+    /* Remove the bottom border on the jumbotron for visual effect */
+    .jumbotron {
+        border-bottom: 0;
+    }
 }

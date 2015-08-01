@@ -14,7 +14,10 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800' rel='stylesheet' type='text/css'>
+    <!-- libs -->
+    <link rel="stylesheet" href="assets/libs/animate.css">
+    <!-- fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,600,700,800' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Orbitron:400,900,700,500' rel='stylesheet' type='text/css'>
   </head>
   <body ng-app="navarroApp">
@@ -26,7 +29,7 @@
     <div ng-include src="'shared/navbar/navbar.html'"></div>
 
     <div ui-view=""></div>
-    
+
     <div ng-include src="'shared/footer/footer.html'"></div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -56,12 +59,15 @@
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="app.js"></script>
     <script src="config.js"></script>
-    <script src="run.js"></script>
     <!-- app components -->
-    <script src="components/about/aboutCtrl.js"></script>
-    <script src="components/contact/contactCtrl.js"></script>
-    <script src="components/home/homeCtrl.js"></script>
-    <script src="components/projects/projectsCtrl.js"></script>
+    <script src="components/about/about.ctrl.js"></script>
+    <script src="components/contact/contact.ctrl.js"></script>
+    <script src="components/home/home.ctrl.js"></script>
+    <script src="components/projects/projects.ctrl.js"></script>
     <!-- endbuild -->
+    <!-- libs -->
+    <script src="assets/libs/typed.js"></script>
+    <script src="assets/libs/parallax.js"></script>
+
 </body>
 </html>

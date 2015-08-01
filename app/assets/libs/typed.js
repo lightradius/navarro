@@ -176,7 +176,7 @@
 
                             // quit if we wont loop back
                             if (self.loop === false || self.curLoop === self.loopCount)
-                                return;
+                            return;
                         }
 
                         self.timeout = setTimeout(function() {
@@ -186,7 +186,7 @@
 
                         /* call before functions if applicable */
                         if (curStrPos === 0)
-                            self.options.preStringTyped(self.arrayPos);
+                        self.options.preStringTyped(self.arrayPos);
 
                         // start typing each new char into existing string
                         // curString: arg, self.el.html: original text inside element
@@ -292,7 +292,7 @@
 
                         self.init();
                     } else
-                        self.typewrite(self.strings[self.sequence[self.arrayPos]], curStrPos);
+                    self.typewrite(self.strings[self.sequence[self.arrayPos]], curStrPos);
                 }
 
                 // humanized value for typing
@@ -300,10 +300,10 @@
 
         }
         /**
-         * Shuffles the numbers in the given array.
-         * @param {Array} array
-         * @returns {Array}
-         */
+        * Shuffles the numbers in the given array.
+        * @param {Array} array
+        * @returns {Array}
+        */
         ,shuffleArray: function(array) {
             var tmp, current, top = array.length;
             if(top) while(--top) {
@@ -335,8 +335,8 @@
     $.fn.typed = function(option) {
         return this.each(function() {
             var $this = $(this),
-                data = $this.data('typed'),
-                options = typeof option == 'object' && option;
+            data = $this.data('typed'),
+            options = typeof option == 'object' && option;
             if (!data) $this.data('typed', (data = new Typed(this, options)));
             if (typeof option == 'string') data[option]();
         });

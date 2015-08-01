@@ -1,34 +1,34 @@
 /* Angular ui.router */
 
-angular
-.module('navarroApp').config(function ($stateProvider) {
+(function() {
+    'use strict';
 
-  var dir = 'components/'
+    angular
+        .module('navarroApp')
+        .config(function ($stateProvider) {
 
-  $stateProvider.state('home', {
-    url: '/',
-    templateUrl: dir + 'home/homeView.html',
-    controller: 'HomeCtrl'
-  })
+            var dir = 'components/'
 
-  // $routeProvider
-  // .when('/', {
-  //   templateUrl: 'components/home.html',
-  //   controller: 'HomeCtrl'
-  // })
-  // .when('/about', {
-  //   templateUrl: 'components/about.html',
-  //   controller: 'AboutCtrl'
-  // })
-  // .when('/contact', {
-  //   templateUrl: 'components/contact.html',
-  //   controller: 'ContactCtrl'
-  // })
-  // .when('/projects', {
-  //   templateUrl: 'components/projects.html',
-  //   controller: 'ProjectsCtrl'
-  // })
-  // .otherwise({
-  //   redirectTo: '/'
-  // });
-})
+            $stateProvider
+                .state('home', {
+                    url: '/',
+                    templateUrl: dir + 'home/home.view.html',
+                    controller: 'HomeCtrl',
+                })
+                .state('about', {
+                    url: '/about',
+                    templateUrl: dir + 'about/about.view.html',
+                    controller: 'AboutCctrl'
+                })
+                .state('projects', {
+                    url: '/projects',
+                    templateUrl: dir + 'projects/projects.view.html',
+                    controller: 'ProjectsCtrl'
+                })
+                .state('contacts', {
+                    url: '/contacts',
+                    templateUrl: dir + 'contacts/contacts.view.html',
+                    controller: 'ContactsCtrl'
+                })
+        })
+})();
