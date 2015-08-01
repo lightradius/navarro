@@ -22,12 +22,13 @@ $background: #222;
 }
 
 #lead {
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    font-size: 20px;
     padding: 30px;
-    font-family: 'Monospace';
+    margin-top: 220px;
+    h2 {
+        font-weight: bold;
+        color: white;
+        font-size: 96px;
+    }
     a {
         font-size: 24px;
         color: white;

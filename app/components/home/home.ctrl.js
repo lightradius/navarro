@@ -16,10 +16,13 @@
 
     Controller.$inject = ['$scope'];
 
-    function Controller($scope) {
+    function Controller($rootScope, $scope, $state) {
         var vm = this;
 
-        vm.imageSrc = "https://download.unsplash.com/1/work-stations-plus-espresso.jpg";
+        vm.imageSrc1 = "https://unsplash.it/1920/1080/?image=06";
+        vm.imageSrc2 = "https://unsplash.it/1920/1080/?image=63";
+        vm.imageSrc3 = "https://unsplash.it/1920/1080/?image=60";
+
 
         vm.strings = [
             // "lightradius is an independent web development brand, focused on consistency, simplicity and ease of use",
@@ -46,7 +49,11 @@
             // "go away."
         ];
 
-        activate();
+        $rootScope
+        .$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
+            event.preventDefault();
+            activate();
+        })
 
         function activate() {
             $(".typed").typed({
@@ -54,9 +61,10 @@
                 typeSpeed: 0
             });
 
+
             $('.parallax-window').parallax({
-                imageSrc: vm.imageSrc,
-                position: "top left",
+                imageSrc: vm.imageSrc3,
+                position: "center center",
             });
         }
     }

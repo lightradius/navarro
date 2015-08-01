@@ -7,7 +7,7 @@
         .module('navarroApp')
         .config(function ($stateProvider) {
 
-            var dir = 'components/'
+            var dir = 'components/';
 
             $stateProvider
                 .state('home', {
