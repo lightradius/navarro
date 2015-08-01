@@ -5,7 +5,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 @import "compass";
 
-$primary: HotPink;
+$primary: Orange;
 $secondary: HotPink;
 $background: #222;
 
@@ -13,8 +13,7 @@ $background: #222;
 @import "footer";
 
 #home {
-    height: 800px;
-    // background: url("../assets/img/background.png") no-repeat center center;
+    height: 80%;
 }
 
 .parallax-window {
@@ -23,11 +22,12 @@ $background: #222;
 }
 
 #lead {
-    margin-top: 130px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
     font-size: 20px;
     padding: 30px;
     font-family: 'Monospace';
-    background-color: black;
     a {
         font-size: 24px;
         color: white;
