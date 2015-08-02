@@ -20,6 +20,7 @@
             'ngRoute',
             'ngSanitize',
             'ngTouch',
-            'ui.router'
+            'ui.router',
+            'angular-parallax'
         ]);
 })();

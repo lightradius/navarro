@@ -62,10 +62,10 @@
             });
 
 
-            $('.parallax-window').parallax({
-                imageSrc: vm.imageSrc3,
-                position: "center center",
-            });
+            // $('.parallax-window').parallax({
+            //     imageSrc: vm.imageSrc3,
+            //     position: "center center",
+            // });
         }
     }
 })();
