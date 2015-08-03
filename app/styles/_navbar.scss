@@ -1,27 +1,44 @@
 // Testing custom navbar height
 .navbar-nav > li > a, .navbar-brand {
-  padding-top: 28px !important; padding-bottom: 0 !important;
-  padding-left: 28px !important;
-  padding-right: 28px !important;
-  height: 80px;
+  padding-top: 32px !important; padding-bottom: 0 !important;
+  padding-left: 32px !important;
+  padding-right: 32px !important;
+  height: 84px;
 }
 button.navbar-toggle.collapsed {
-  margin-top: 23px !important;
+  margin-top: 23px !important; // + 9px padding = 32px from navbar > li > a elements
 }
 button.navbar-toggle {
   margin-top: 23px !important;
+
+  // No border or special effects on click/hover
+  border: none;
+  &:hover {
+      background-color: rgba(0, 0, 0, 0.4) !important;
+  }
+  &:focus {
+      background-color: rgba(0, 0, 0, 0.4) !important;
+  }
 }
 .navbar {
   font-family: 'Orbitron';
   border-radius: 0;
   border: none;
-  min-height: 80px !important;
+  min-height: 84px !important;
   a:active, a:focus {
     border-bottom: 3px solid $primary;
   }
 }
 .navbar-inverse {
   background-color: rgba(0, 0, 0, 0.4);
+}
+
+.navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse {
+    max-height: 600px !important; // Find way to counter a max-height
+}
+#js-navbar-collapse {
+    overflow-y: hidden !important; // Not even sure if this matters, but find a way to counter it
+    overflow-x: hidden !important; // No horizontal scroll bar when the bar collapses before sm width, due to code below
 }
 
 // Earlier navbar collapse

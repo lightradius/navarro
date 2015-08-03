@@ -13,27 +13,29 @@ $background: #222;
 @import "footer";
 
 #home {
-    height: 80%;
+    height: 600px;
 }
 
 .section {
-    height: 800px;
+    height: 600px;
 }
 
 .parallax-window {
-    min-height: 766px;
-    background: url("https://unsplash.it/1920/1080/?image=60");
+    min-height: 600px;
+    background: url("../assets/img/bg.png") no-repeat;
     background-size: cover;
 }
 
 #lead {
     padding: 30px;
-    margin-top: 220px;
+    margin-top: 120px;
     h2 {
         font-weight: bold;
         color: white;
         font-size: 96px;
         text-shadow: 0px 0px 10px black;
+        transform-origin: 50% 100%;
+        transform: perspective(300px) rotateX(25deg);
     }
     a {
         font-size: 24px;

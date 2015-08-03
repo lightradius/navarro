@@ -19,11 +19,6 @@
     function Controller($rootScope, $scope, $state) {
         var vm = this;
 
-        vm.imageSrc1 = "https://unsplash.it/1920/1080/?image=06";
-        vm.imageSrc2 = "https://unsplash.it/1920/1080/?image=63";
-        vm.imageSrc3 = "https://unsplash.it/1920/1080/?image=60";
-
-
         vm.strings = [
             // "lightradius is an independent web development brand, focused on consistency, simplicity and ease of use",
             // "specialized in both business and personal landing pages",
@@ -60,12 +55,6 @@
                 strings: vm.strings,
                 typeSpeed: 0
             });
-
-
-            // $('.parallax-window').parallax({
-            //     imageSrc: vm.imageSrc3,
-            //     position: "center center",
-            // });
         }
     }
 })();
