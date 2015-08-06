@@ -5,9 +5,11 @@
 
     angular
         .module('navarroApp')
-        .config(function ($stateProvider) {
+        .config(function ($stateProvider, $urlRouterProvider ) {
 
             var dir = 'components/';
+
+            $urlRouterProvider.otherwise('/');
 
             $stateProvider
                 .state('home', {
@@ -15,20 +17,10 @@
                     templateUrl: dir + 'home/home.view.html',
                     controller: 'HomeCtrl',
                 })
-                .state('about', {
-                    url: '/about',
-                    templateUrl: dir + 'about/about.view.html',
-                    controller: 'AboutCctrl'
-                })
-                .state('projects', {
-                    url: '/projects',
-                    templateUrl: dir + 'projects/projects.view.html',
-                    controller: 'ProjectsCtrl'
-                })
-                .state('contacts', {
-                    url: '/contacts',
-                    templateUrl: dir + 'contacts/contacts.view.html',
-                    controller: 'ContactsCtrl'
+                .state('404', {
+                    url: '/404',
+                    templateUrl: dir + '404/404.view.html',
+                    controller: '404Ctrl'
                 })
         })
 })();

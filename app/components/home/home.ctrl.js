@@ -55,6 +55,12 @@
                 strings: vm.strings,
                 typeSpeed: 0
             });
+
+            // setInterval((function() {
+            //     var $this = $('#arrow');
+            //     $this.addClass('bounce');
+            //     $this.removeClass();
+            // })(), 3000);
         }
     }
 })();
