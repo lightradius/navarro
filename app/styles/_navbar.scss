@@ -1,9 +1,14 @@
 // Testing custom navbar height
 .navbar-nav > li > a, .navbar-brand {
-    padding-top: 32px !important; padding-bottom: 0 !important;
-    padding-left: 32px !important;
-    padding-right: 32px !important;
+    padding-top: 32px !important;
+    padding-bottom: 0 !important;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
     height: 84px;
+}
+
+.navbar-nav > li > a{
+    font-size: 16px;
 }
 
 .navbar-toggle {
@@ -23,15 +28,23 @@
         transition: all 0.2s;
     }
     .top {
-        transform: rotate(45deg);
-        transform-origin: 10% 10%;
+        -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+        -webkit-transform-origin: 10% 10%;
+            -ms-transform-origin: 10% 10%;
+                transform-origin: 10% 10%;
     }
     .mid {
         opacity: 0;
     }
     .bot {
-        transform: rotate(-45deg);
-        transform-origin: 10% 90%;
+        -webkit-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+        -webkit-transform-origin: 10% 90%;
+            -ms-transform-origin: 10% 90%;
+                transform-origin: 10% 90%;
     }
 
 }
@@ -39,12 +52,16 @@
     margin-top: 23px !important; // + 9px padding = 32px from navbar > li > a elements
     .top {
         -webkit-transform: rotate(0);
+            -ms-transform: rotate(0);
+                transform: rotate(0);
     }
     .mid {
         opacity: 1;
     }
     .bot {
         -webkit-transform: rotate(0);
+            -ms-transform: rotate(0);
+                transform: rotate(0);
     }
 }
 
@@ -58,30 +75,25 @@
     }
 }
 .navbar-inverse {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.0);
 }
 
 .navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse {
     max-height: 600px !important; // Find way to counter a max-height
 }
 
-#js-navbar-collapse {
-    overflow-y: hidden !important; // Not even sure if this matters, but find a way to counter it
-    overflow-x: hidden !important; // No horizontal scroll bar when the bar collapses before sm width, due to code below
-}
-
 // Earlier navbar collapse
-@media (min-width: 768px) and (max-width: 991px) {
-    .navbar-collapse.collapse {
-        display: none !important;
-    }
-    .navbar-collapse.collapse.in {
-        display: block !important;
-    }
-    .navbar-header .collapse, .navbar-toggle {
-        display:block !important;
-    }
-    .navbar-header {
-        float:none;
-    }
-}
+// @media (min-width: 768px) and (max-width: 991px) {
+//     .navbar-collapse.collapse {
+//         display: none !important;
+//     }
+//     .navbar-collapse.collapse.in {
+//         display: block !important;
+//     }
+//     .navbar-header .collapse, .navbar-toggle {
+//         display:block !important;
+//     }
+//     .navbar-header {
+//         float:none;
+//     }
+// }

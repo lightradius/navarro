@@ -56,6 +56,10 @@
                 typeSpeed: 0
             });
 
+            $('#home').waypoint(function(direction) {
+                alert('Top of thing hit top of viewport.');
+            });
+
             // setInterval((function() {
             //     var $this = $('#arrow');
             //     $this.addClass('bounce');
