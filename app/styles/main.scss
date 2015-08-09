@@ -9,6 +9,7 @@ $primary: Orange;
 $secondary: HotPink;
 $background: #222;
 
+@import "animations";
 @import "navbar";
 @import "footer";
 
@@ -48,12 +49,8 @@ $background: #222;
     }
 }
 
-.green {
-    background-color: green !important;
-}
-
-.blue {
-    background-color: blue !important;
+.black {
+    background-color: $background !important;
 }
 
 #three-eyed-snake  {

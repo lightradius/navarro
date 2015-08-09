@@ -55,10 +55,11 @@
         var waypoint = new Waypoint({
             element: document.getElementById('lead'),
             handler: function(direction) {
-                console.log('at the top')
-            }
+                console.log('at the top');
+                $('.navbar').toggleClass('black');
+            },
+            offset: '-1%'
         });
-
             // $(window).scroll(function() {
             //     var scroll = $(window).scrollTop();
             //     if (scroll >= 10) {
