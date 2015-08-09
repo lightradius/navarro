@@ -44,11 +44,7 @@
             // "go away."
         ];
 
-        $rootScope
-        .$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
-            event.preventDefault();
-            activate();
-        })
+        activate();
 
         function activate() {
             $(".typed").typed({
@@ -56,9 +52,21 @@
                 typeSpeed: 0
             });
 
-            $('#home').waypoint(function(direction) {
-                alert('Top of thing hit top of viewport.');
-            });
+        var waypoint = new Waypoint({
+            element: document.getElementById('lead'),
+            handler: function(direction) {
+                console.log('at the top')
+            }
+        });
+
+            // $(window).scroll(function() {
+            //     var scroll = $(window).scrollTop();
+            //     if (scroll >= 10) {
+            //         $(".navbar").removeClass("green");
+            //     } else {
+            //         $(".navbar").addClass("green");
+            //     }
+            // });
 
             // setInterval((function() {
             //     var $this = $('#arrow');

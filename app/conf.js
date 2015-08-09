@@ -5,7 +5,7 @@
 
     angular
         .module('navarroApp')
-        .config(function ($stateProvider, $urlRouterProvider ) {
+        .config(function ($stateProvider, $urlRouterProvider) {
 
             var dir = 'components/';
 
@@ -14,13 +14,12 @@
             $stateProvider
                 .state('home', {
                     url: '/',
-                    templateUrl: dir + 'home/home.view.html',
+                    templateUrl: dir + 'home/home.html',
                     controller: 'HomeCtrl',
                 })
                 .state('404', {
                     url: '/404',
                     templateUrl: dir + '404/404.view.html',
-                    controller: '404Ctrl'
-                })
-        })
+                });
+        });
 })();

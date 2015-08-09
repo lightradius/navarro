@@ -26,7 +26,7 @@ $background: #222;
     background-size: cover;
 }
 
-#lead {
+#splash {
     padding: 30px;
     margin-top: 96px;
     h2 {
@@ -46,6 +46,14 @@ $background: #222;
             text-decoration: none;
         }
     }
+}
+
+.green {
+    background-color: green !important;
+}
+
+.blue {
+    background-color: blue !important;
 }
 
 #three-eyed-snake  {
