@@ -13,11 +13,50 @@ $background: #222;
 @import "navbar";
 @import "footer";
 
-#home {
+/* Basic Elements */
+body {
+    height: 100%;
+    color: $background;
+    // margin-top: 80px;
+    font-family: 'Open Sans';
+    font-size: 1.8em;
+    font-weight: 100;
+    /* Needed to stop white horizontal strips from showing under the parallax when scrolling up too fast */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Orbitron';
+    color: $secondary;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+
+/* Reusable and helper classes */
+.brand {
+    font-family: 'Orbitron';
+    font-weight: 400;
+    color: white;
+    &>span {
+        font-weight: 900;
+        color: $secondary;
+    }
+}
+
+.text-bold {
+    font-weight: 900;
+    color: $primary;
+}
+
+/* Page sections */
+#lead {
     height: 600px;
 }
 
 .section {
+    margin-top: 84px;
     height: 600px;
 }
 
@@ -29,15 +68,13 @@ $background: #222;
 
 #splash {
     padding: 30px;
-    margin-top: 96px;
+    margin-top: 88px;
     h2 {
         font-weight: bold;
         color: white;
-        font-size: 88px;
+        font-size: 80px;
         text-shadow: 0px 0px 4px black;
         text-shadow: 0px 0px 16px black;
-        transform-origin: 50% 100%;
-        transform: perspective(300px) rotateX(25deg);
     }
     a {
         font-size: 24px;
@@ -46,42 +83,6 @@ $background: #222;
         &:hover, &:active {
             text-decoration: none;
         }
-    }
-    /* Large Devices, Wide Screens */
-    @media only screen and (max-width : 1200px) {
-        h2 {
-            font-size: 70px;
-        }
-        a {
-            font-size: 16px;
-        }
-    }
-
-    /* Medium Devices, Desktops */
-    @media only screen and (max-width : 992px) {
-        h2 {
-            font-size: 50px;
-        }
-        a {
-            font-size: 14px;
-        }
-    }
-
-    /* Small Devices, Tablets */
-    @media only screen and (max-width : 768px) {
-        .parallax-window {
-            height: 400px;
-        }
-    }
-
-    /* Extra Small Devices, Phones */
-    @media only screen and (max-width : 480px) {
-
-    }
-
-    /* Custom, iPhone Retina */
-    @media only screen and (max-width : 320px) {
-
     }
 }
 
@@ -93,38 +94,7 @@ $background: #222;
 #three-eyed-snake  {
     height: 1000px;
 }
-
-body {
-    height: 100%;
-    color: white;
-    // margin-top: 80px;
-    font-family: 'Open Sans';
-    font-size: 1.8em;
-    font-weight: 100;
-    background-color: $background;
-    /* Needed to stop white horizontal strips from showing under the parallax when scrolling up too fast */
-}
-
-.text-bold {
-    font-weight: 900;
-    color: $primary;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Orbitron';
-    color: $primary;
-}
-
-.brand {
-    font-family: 'Orbitron';
-    font-weight: 400;
-    color: white;
-    &>span {
-        font-weight: 900;
-        color: $primary;
-    }
-}
-
+/* Media queries */
 /* Custom page footer */
 .footer {
     padding-top: 19px;
@@ -132,40 +102,59 @@ h1, h2, h3, h4, h5, h6 {
     border-top: 1px solid #e5e5e5;
 }
 
-.container-narrow > hr {
-    margin: 30px 0;
-}
 
-/* Main marketing message and sign up button */
-.jumbotron {
-    text-align: center;
-    border-bottom: 1px solid #e5e5e5;
-
-    .btn {
-        font-size: 21px;
-        padding: 14px 245px;
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+    h2 {
+        font-size: 70px;
+    }
+    a {
+        font-size: 16px;
     }
 }
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-    .container {
-        max-width: 730px;
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+    h2 {
+        font-size: 50px;
+    }
+    a {
+        font-size: 14px;
+    }
+    #lead, .parallax-window {
+        height: 500px;
+    }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+    h2 {
+        font-size: 40px;
+    }
+    a {
+        font-size: 14px;
+    }
+    #lead, .parallax-window {
+        height: 400px;
+    }
+    .navbar {
+        background-color: $background !important;
+        border-bottom: 1px solid grey;
+    }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+    h2 {
+        font-size: 30px;
+    }
+    a {
+        font-size: 14px;
     }
 
-    /* Remove the padding we set earlier */
-    .header,
-    .marketing,
-    // .footer {
-    //   padding-left: 0;
-    //   padding-right: 0;
-    // }
-    /* Space out the masthead */
-    .header {
-        margin-bottom: 30px;
-    }
-    /* Remove the bottom border on the jumbotron for visual effect */
-    .jumbotron {
-        border-bottom: 0;
-    }
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
 }

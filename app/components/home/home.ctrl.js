@@ -14,9 +14,9 @@
         .module('navarroApp')
         .controller('HomeCtrl', Controller);
 
-    Controller.$inject = ['$scope'];
+    Controller.$inject = ['$anchorScroll', '$location', '$rootScope', '$scope', '$state'];
 
-    function Controller($rootScope, $scope, $state) {
+    function Controller($anchorScroll, $location, $rootScope, $scope, $state) {
         var vm = this;
 
         vm.strings = [
@@ -43,6 +43,12 @@
             // "i have to return some videotapes.",
             // "go away."
         ];
+
+        vm.scrollTo = function(id) {
+            console.log("Scrolling to %s", id);
+            $location.hash(id);
+            $anchorScroll();
+        }
 
         activate();
 
