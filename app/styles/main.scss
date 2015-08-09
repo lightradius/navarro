@@ -22,7 +22,7 @@ $background: #222;
 }
 
 .parallax-window {
-    min-height: 600px;
+    height: 600px;
     background: url("../assets/img/bg.png") no-repeat;
     background-size: cover;
 }
@@ -47,10 +47,47 @@ $background: #222;
             text-decoration: none;
         }
     }
+    /* Large Devices, Wide Screens */
+    @media only screen and (max-width : 1200px) {
+        h2 {
+            font-size: 70px;
+        }
+        a {
+            font-size: 16px;
+        }
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (max-width : 992px) {
+        h2 {
+            font-size: 50px;
+        }
+        a {
+            font-size: 14px;
+        }
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (max-width : 768px) {
+        .parallax-window {
+            height: 400px;
+        }
+    }
+
+    /* Extra Small Devices, Phones */
+    @media only screen and (max-width : 480px) {
+
+    }
+
+    /* Custom, iPhone Retina */
+    @media only screen and (max-width : 320px) {
+
+    }
 }
 
 .black {
     background-color: $background !important;
+    border-bottom: 1px solid grey;
 }
 
 #three-eyed-snake  {

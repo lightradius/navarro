@@ -47,19 +47,43 @@
         activate();
 
         function activate() {
+
             $(".typed").typed({
                 strings: vm.strings,
                 typeSpeed: 0
             });
 
-        var waypoint = new Waypoint({
-            element: document.getElementById('lead'),
-            handler: function(direction) {
-                console.log('at the top');
-                $('.navbar').toggleClass('black');
-            },
-            offset: '-1%'
-        });
+            var waypoint = new Waypoint({
+                element: document.getElementById('lead'),
+                handler: function(direction) {
+                    console.log('at the top');
+                    $('.navbar').toggleClass('black');
+                },
+                offset: '-1%' // Otherwise never triggered when scrolling back to top
+            });
+
+            function reset($elem) {
+                $elem.before($elem.clone(true));
+                var $newElem = $elem.prev();
+                $elem.remove();
+                return $newElem;
+            }
+
+            function bounce(elem) {
+
+                console.log('Bounce.');
+
+                var $this = elem;
+                    $this.removeClass("bounce animated");
+                    $this = reset($this);
+                    $this.addClass("bounce animated");
+            }
+
+            setInterval(function() {
+                bounce($('#arrow'));
+            }, 3000);
+
+
             // $(window).scroll(function() {
             //     var scroll = $(window).scrollTop();
             //     if (scroll >= 10) {
