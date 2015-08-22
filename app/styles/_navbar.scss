@@ -70,10 +70,13 @@
     border-radius: 0;
     border: none;
     min-height: 84px !important;
-    a:active, a:focus {
-        border-bottom: 3px solid $primary;
+    a:first-child { // Why?
+        &:active span, &:focus span {
+            border-bottom: 2px solid $secondary;
+        }
     }
 }
+
 .navbar-inverse {
     background-color: rgba(0, 0, 0, 0.0);
 }
