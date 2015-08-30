@@ -5,9 +5,13 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 @import "compass";
 
-$primary: Orange;
-$secondary: HotPink;
-$background: #222;
+// colors
+$primary: Crimson;
+$secondary: Orange;
+$background: #222222;
+
+
+// fonts
 
 @import "animations";
 @import "navbar";
@@ -16,7 +20,8 @@ $background: #222;
 /* Basic Elements */
 body {
     height: 100%;
-    color: $background;
+    color: white;
+    background-color: $background;
     // margin-top: 80px;
     font-family: 'Open Sans';
     font-size: 1.8em;
@@ -33,26 +38,23 @@ h3 {
     font-size: 30px;
 }
 
-
-/* Reusable and helper classes */
+/* structural and helper classes */
 .brand {
     font-family: 'Orbitron';
     font-weight: 400;
     color: white;
     &>span {
         font-weight: 900;
-        color: $secondary;
+        color: $primary;
     }
 }
 
-.text-bold {
-    font-weight: 900;
-    color: $primary;
-}
 
-/* Page sections */
-#lead {
-    height: 700px;
+
+.footer {
+    padding-top: 19px;
+    color: #777;
+    border-top: 1px solid #e5e5e5;
 }
 
 .section {
@@ -60,8 +62,19 @@ h3 {
     height: 600px;
 }
 
+.text-bold {
+    font-weight: 900;
+    color: $primary;
+}
+
+/* pages */
+// page 1
+#lead {
+    height: 900px;
+}
+
 .parallax-window {
-    height: 700px;
+    height: 800px;
     background: url("../assets/img/bg.jpg") no-repeat;
     background-size: cover;
 }
@@ -86,22 +99,16 @@ h3 {
     }
 }
 
-.black {
+.dark {
     background-color: $background !important;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid $secondary;
 }
 
-#three-eyed-snake  {
-    height: 1000px;
-}
+// #three-eyed-snake  {
+//     height: 1000px;
+// }
 /* Media queries */
 /* Custom page footer */
-.footer {
-    padding-top: 19px;
-    color: #777;
-    border-top: 1px solid #e5e5e5;
-}
-
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
@@ -139,7 +146,7 @@ h3 {
     }
     .navbar {
         background-color: $background !important;
-        border-bottom: 1px solid grey;
+        border-bottom: 1px solid $secondary;
     }
 }
 
