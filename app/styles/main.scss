@@ -6,9 +6,10 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "compass";
 
 // colors
-$primary: Crimson;
-$secondary: Orange;
-$background: #222222;
+$primary: BlueViolet;
+$secondary: LimeGreen;
+$background: #111;
+$subtle: #333;
 
 
 // fonts
@@ -49,8 +50,6 @@ h3 {
     }
 }
 
-
-
 .footer {
     padding-top: 19px;
     color: #777;
@@ -70,18 +69,30 @@ h3 {
 /* pages */
 // page 1
 #lead {
-    height: 900px;
+    height: 800px;
 }
 
-// .parallax-window {
-//     height: 800px;
-//     background: url("../assets/img/bg.jpg") no-repeat;
-//     background-size: cover;
-// }
+.grid {
+    position: absolute;
+    top: 0;
+    height: 800px;
+    width: 100%;
+    background: url("../assets/img/pattern.png") repeat;
+    background-color: $primary;
+    opacity: 0.2;
+}
+
+.lead-image {
+    height: 800px;
+    background: url("../assets/img/bg.jpg") no-repeat;
+    background-size: cover;
+}
 
 #splash {
     padding: 30px;
-    margin-top: 88px;
+    // top: 50%;
+    // transform: translateY(-50%);
+    // z-index: 1;
     h2 {
         font-weight: bold;
         color: white;
@@ -99,10 +110,7 @@ h3 {
     }
 }
 
-.dark {
-    background-color: $background !important;
-    border-bottom: 1px solid $secondary;
-}
+
 
 // #three-eyed-snake  {
 //     height: 1000px;

@@ -85,6 +85,11 @@
     max-height: 600px !important; // Find way to counter a max-height
 }
 
+.dark {
+    background-color: $background !important;
+    border-bottom: 2px solid $subtle;
+}
+
 // Earlier navbar collapse
 // @media (min-width: 768px) and (max-width: 991px) {
 //     .navbar-collapse.collapse {
