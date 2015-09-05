@@ -60,7 +60,7 @@
             });
 
             var waypoint = new Waypoint({
-                element: document.getElementById('lead'),
+                element: document.getElementById('home'),
                 handler: function(direction) {
                     console.log('at the top');
                     $('.navbar').toggleClass('dark');
@@ -85,7 +85,7 @@
 
             setInterval(function() {
                 bounce($('#arrow'));
-            }, 3000);
+            }, 6000);
         }
     }
 })();

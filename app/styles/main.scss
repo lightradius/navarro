@@ -25,7 +25,7 @@ body {
     background-color: $background;
     // margin-top: 80px;
     font-family: 'Open Sans';
-    font-size: 1.8em;
+    // font-size: 1.8em;
     font-weight: 100;
     /* Needed to stop white horizontal strips from showing under the parallax when scrolling up too fast */
 }
@@ -33,6 +33,10 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Orbitron';
     color: $secondary;
+}
+
+h2 {
+    font-size: 36px;
 }
 
 h3 {
@@ -68,14 +72,14 @@ h3 {
 
 /* pages */
 // page 1
-#lead {
-    height: 800px;
+#home {
+    height: 760px;
 }
 
 .grid {
     position: absolute;
     top: 0;
-    height: 800px;
+    height: 100%;
     width: 100%;
     background: url("../assets/img/pattern.png") repeat;
     background-color: $primary;
@@ -83,8 +87,8 @@ h3 {
 }
 
 .lead-image {
-    height: 800px;
-    background: url("../assets/img/bg.jpg") no-repeat;
+    height: 100%;
+    background: url("../assets/img/bg.jpg") no-repeat top center;
     background-size: cover;
 }
 
@@ -96,7 +100,7 @@ h3 {
     h2 {
         font-weight: bold;
         color: white;
-        font-size: 80px;
+        font-size: 60px;
         text-shadow: 0px 0px 4px black;
         text-shadow: 0px 0px 16px black;
     }
@@ -110,16 +114,11 @@ h3 {
     }
 }
 
-
-
-// #three-eyed-snake  {
-//     height: 1000px;
-// }
-/* Media queries */
-/* Custom page footer */
-
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
+    #home {
+        height: 700px;
+    }
     h2 {
         font-size: 70px;
     }
@@ -130,26 +129,29 @@ h3 {
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
+    #home {
+        height: 600px;
+    }
     h2 {
         font-size: 50px;
     }
     a {
         font-size: 14px;
     }
-    #lead, .parallax-window {
-        height: 500px;
-    }
 }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
+    #home {
+        height: 540px;
+    }
     h2 {
         font-size: 40px;
     }
     a {
         font-size: 14px;
     }
-    #lead, .parallax-window {
+    #home {
         height: 400px;
     }
     .navbar {
