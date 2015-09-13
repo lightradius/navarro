@@ -60,6 +60,13 @@ h3 {
     border-top: 1px solid #e5e5e5;
 }
 
+.card {
+    color: purple;
+    background-color: aquamarine;
+    height: 400px;
+    box-shadow: 0 2px grey;
+}
+
 .section {
     margin-top: 84px;
     height: 600px;
@@ -72,31 +79,30 @@ h3 {
 
 /* pages */
 // page 1
-#home {
+#home, .grid {
     height: 760px;
+    background-color: purple;
 }
 
 .grid {
     position: absolute;
     top: 0;
-    height: 100%;
     width: 100%;
     background: url("../assets/img/pattern.png") repeat;
-    background-color: $primary;
-    opacity: 0.2;
+    // background-color: green;
+    opacity: 0.4;
 }
 
 .lead-image {
     height: 100%;
-    background: url("../assets/img/bg.jpg") no-repeat top center;
-    background-size: cover;
+    // background: url("../assets/img/bg3.jpg") no-repeat center center;
+    // background-size: cover;
 }
 
 #splash {
-    padding: 30px;
-    // top: 50%;
-    // transform: translateY(-50%);
-    // z-index: 1;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
     h2 {
         font-weight: bold;
         color: white;
@@ -116,7 +122,7 @@ h3 {
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
-    #home {
+    #home, .grid {
         height: 700px;
     }
     h2 {
@@ -129,7 +135,7 @@ h3 {
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
-    #home {
+    #home, .grid {
         height: 600px;
     }
     h2 {
@@ -142,7 +148,7 @@ h3 {
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
-    #home {
+    #home, .grid {
         height: 540px;
     }
     h2 {
@@ -150,9 +156,6 @@ h3 {
     }
     a {
         font-size: 14px;
-    }
-    #home {
-        height: 400px;
     }
     .navbar {
         background-color: $background !important;

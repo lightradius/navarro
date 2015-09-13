@@ -78,7 +78,8 @@
 }
 
 .navbar-inverse {
-    background-color: rgba(0, 0, 0, 0.0);
+    background-color: rgba(255, 255, 255, 0);
+    border-bottom: 2px solid rgba(255, 255, 255, 0);
 }
 
 .navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse {
