@@ -19,8 +19,11 @@
     function Controller($anchorScroll, $location, $rootScope, $scope, $state) {
         var vm = this;
 
+        // vm.colorize = colorize;
+
         vm.strings = [
-            // "lightradius is an independent web development brand, focused on consistency, simplicity and ease of use",
+            "Hello world^300!",
+            "Here be web dev"
             // "specialized in both business and personal landing pages",
             // "sleek and simple designs, built using true and tested web frameworks",
             // "got an idea for a single page web application? Send us a holler and we can discuss it",
@@ -45,9 +48,13 @@
         ];
 
         vm.scrollTo = function(id) {
-            console.log("Scrolling to %s", id);
+            console.log('Scrolling to %s', id);
             $location.hash(id);
             $anchorScroll();
+        }
+
+        vm.dollarClick = function() {
+
         }
 
         activate();
@@ -56,7 +63,15 @@
 
             $(".typed").typed({
                 strings: vm.strings,
-                typeSpeed: 0
+                startDelay: 800,
+                typeSpeed: 100,
+                backDelay: 1200,
+                backSpeed: 80,
+                cursorChar: '_'
+            });
+
+            $('#dollar').on('click', function() {
+                $('.achievement').addClass('animated');
             });
 
             var waypoint = new Waypoint({
@@ -75,17 +90,36 @@
                 return $newElem;
             }
 
-            function bounce(elem) {
-                console.log('Bounce.');
-                var $this = elem;
-                $this.removeClass("bounce animated");
-                $this = reset($this);
-                $this.addClass("bounce animated");
-            }
+            // function bounce(elem) {
+            //     console.log('Bounce.');
+            //     var $this = elem;
+            //     $this.removeClass('bounce animated');
+            //     $this = reset($this);
+            //     $this.addClass('bounce animated');
+            // }
 
-            setInterval(function() {
-                bounce($('#arrow'));
-            }, 6000);
+            // setInterval(function() {
+            //     bounce($('#arrow'));
+            // }, 6000);
+        }
+
+        // function colorize(elem) {
+        //     var r = randomize();
+        //     var g = randomize();
+        //     var b = randomize();
+        //     var mix = 256;
+        //
+        //     r = (r + mix) / 2;
+        //     g = (g + mix) / 2;
+        //     b = (b + mix) / 2;
+        //
+        //     var color = 23;
+        //
+        //     $(elem).css('background-color', );
+        // }
+
+        function randomize() {
+            return Math.floor(Math.random() * 257);
         }
     }
 })();

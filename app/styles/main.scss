@@ -17,6 +17,7 @@ $subtle: #333;
 @import "animations";
 @import "navbar";
 @import "footer";
+@import "compass";
 
 /* Basic Elements */
 body {
@@ -43,6 +44,10 @@ h3 {
     font-size: 30px;
 }
 
+a:hover {
+    color: white;
+}
+
 /* structural and helper classes */
 .brand {
     font-family: 'Orbitron';
@@ -50,7 +55,7 @@ h3 {
     color: white;
     &>span {
         font-weight: 900;
-        color: $primary;
+        color: $secondary;
     }
 }
 
@@ -68,7 +73,7 @@ h3 {
 }
 
 .section {
-    margin-top: 84px;
+    // margin-top: 84px;
     height: 600px;
 }
 
@@ -79,18 +84,22 @@ h3 {
 
 /* pages */
 // page 1
-#home, .grid {
-    height: 760px;
-    background-color: purple;
+#home {
+    height: 660px;
+    background-image: radial-gradient(
+        circle at top right,
+        $primary,
+        #2E0854
+      );
 }
 
 .grid {
-    position: absolute;
-    top: 0;
-    width: 100%;
     background: url("../assets/img/pattern.png") repeat;
     // background-color: green;
-    opacity: 0.4;
+}
+
+#about {
+    background-color: white;
 }
 
 .lead-image {
@@ -107,8 +116,9 @@ h3 {
         font-weight: bold;
         color: white;
         font-size: 60px;
-        text-shadow: 0px 0px 4px black;
-        text-shadow: 0px 0px 16px black;
+        padding-left: 24px;
+        // text-shadow: 0px 0px 4px black;
+        // text-shadow: 0px 0px 16px black;
     }
     a {
         font-size: 24px;
@@ -118,6 +128,38 @@ h3 {
             text-decoration: none;
         }
     }
+}
+
+#dollar {
+    color: $secondary;
+    cursor: pointer;
+}
+
+.achievement {
+    height: 100px;
+    width: 300px;
+    background-color: white;
+    border: 8px solid Indigo;
+    position: absolute;
+    top: 8px;
+    left: 9px;
+    z-index: 999px;
+    display: none;
+}
+
+#arrow {
+    height: 80px;
+    a {
+        color: $primary;
+        &:hover {
+            color: white;
+        }
+    }
+    // position: relative;
+    // top: 100%;
+    // transform: translateY(-50%);
+    // transform: translateX(-50%);
+
 }
 
 /* Large Devices, Wide Screens */
