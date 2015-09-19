@@ -48,6 +48,14 @@ a:hover {
     color: white;
 }
 
+.unselectable {
+   -moz-user-select: none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+}
+
 /* structural and helper classes */
 .brand {
     font-family: 'Orbitron';
@@ -112,6 +120,7 @@ a:hover {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+    select: none;
     h2 {
         font-weight: bold;
         color: white;
@@ -198,10 +207,6 @@ a:hover {
     }
     a {
         font-size: 14px;
-    }
-    .navbar {
-        background-color: $background !important;
-        border-bottom: 1px solid $secondary;
     }
 }
 

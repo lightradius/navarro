@@ -1,14 +1,15 @@
 
 <div class="achievement fadeIn"></div>
-<div id="home" class="row grid">
-    <div id="splash" class="animated fadeIn col-xs-10 col-xs-offset-1 ">
-        <h2 class=""><span id="dollar">$ </span><span class="typed"></span></h2>
+<div class="container-fluid">
+    <div id="home" class="row">
+        <div id="splash" class="animated fadeIn col-xs-10 col-xs-offset-1 ">
+            <h2 class="lead-text"><span id="dollar" class="unselectable" ng-click="vm.dollarClick()">$ </span><span class="typed"></span></h2>
+        </div>
     </div>
 </div>
-<div id="arrow" class="text-center">
-    <a href=""><i class="fa fa-2x fa-chevron-down smooth" scroll-to="about-wp" duration="800"></i></a>
+<div id="arrow" class="text-center unselectable">
+    <h3><a href=""><i class="fa fa-2x fa-chevron-down smooth" scroll-to="about" duration="800"></i></a></h3>
 </div>
-<div id="about-wp"></div>
 <div id="about" class="container-fluid section text-center">
     <div class="col-md-4">
         <h3>Consistency</h3>

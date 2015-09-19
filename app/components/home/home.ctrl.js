@@ -17,12 +17,20 @@
     Controller.$inject = ['$anchorScroll', '$location', '$rootScope', '$scope', '$state'];
 
     function Controller($anchorScroll, $location, $rootScope, $scope, $state) {
+
         var vm = this;
+
+        vm.dollars = 0;
+        vm.bounce = bounce;
+        vm.type = type;
+        vm.typeMo = typeMo;
+        vm.reset = reset;
+        vm.dollarClick = dollarClick;
 
         // vm.colorize = colorize;
 
         vm.strings = [
-            "Hello world^300!",
+            "Hello world^600!",
             "Here be web dev"
             // "specialized in both business and personal landing pages",
             // "sleek and simple designs, built using true and tested web frameworks",
@@ -54,25 +62,22 @@
         }
 
         vm.dollarClick = function() {
+            vm.dollars++;
+            console.log('Dollars: %s', vm.dollars);
+            var elem = $('<span class="typed"></span>');
 
+            $('.typed').remove();
+            $('.typed-cursor').remove();
+            $('.lead-text').append(elem);
+            vm.typeMo();
         }
 
         activate();
 
         function activate() {
 
-            $(".typed").typed({
-                strings: vm.strings,
-                startDelay: 800,
-                typeSpeed: 100,
-                backDelay: 1200,
-                backSpeed: 80,
-                cursorChar: '_'
-            });
+            vm.type();
 
-            $('#dollar').on('click', function() {
-                $('.achievement').addClass('animated');
-            });
 
             var waypoint = new Waypoint({
                 element: document.getElementById('home'),
@@ -82,26 +87,20 @@
                 },
                 offset: '-1%' // Otherwise never triggered when scrolling back to top
             });
-
-            function reset($elem) {
-                $elem.before($elem.clone(true));
-                var $newElem = $elem.prev();
-                $elem.remove();
-                return $newElem;
-            }
-
-            // function bounce(elem) {
-            //     console.log('Bounce.');
-            //     var $this = elem;
-            //     $this.removeClass('bounce animated');
-            //     $this = reset($this);
-            //     $this.addClass('bounce animated');
-            // }
-
-            // setInterval(function() {
-            //     bounce($('#arrow'));
-            // }, 6000);
         }
+
+
+        function bounce(elem) {
+            console.log('Bounce.');
+            var $this = elem;
+            $this.removeClass('bounce animated');
+            $this = reset($this);
+            $this.addClass('bounce animated');
+        }
+/*
+        // setInterval(function() {
+        //     bounce($('#arrow'));
+        // }, 6000);
 
         // function colorize(elem) {
         //     var r = randomize();
@@ -116,10 +115,49 @@
         //     var color = 23;
         //
         //     $(elem).css('background-color', );
-        // }
+        // } */
+
+        function dollarClick() {
+            console.log(1);
+            var elem = $('<span class="typed"></span>');
+
+            $('.typed').remove();
+            $('.typed-cursor').remove();
+            $('.lead-text').append(elem);
+            vm.typeMo();
+        }
 
         function randomize() {
             return Math.floor(Math.random() * 257);
+        }
+
+        function reset($elem) {
+            $elem.before($elem.clone(true));
+            var $newElem = $elem.prev();
+            $elem.remove();
+            return $newElem;
+        }
+
+        function type() {
+            $(".typed").typed({
+                strings: vm.strings,
+                startDelay: 2000,
+                typeSpeed: 40,
+                backDelay: 1200,
+                backSpeed: 30,
+                cursorChar: '_'
+            });
+        }
+
+        function typeMo() {
+            $(".typed").typed({
+                strings: ["test"],
+                startDelay: 2000,
+                typeSpeed: 40,
+                backDelay: 1200,
+                backSpeed: 30,
+                cursorChar: '_'
+            });
         }
     }
 })();
