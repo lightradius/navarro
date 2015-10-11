@@ -1,4 +1,24 @@
-// Testing custom navbar height
+// Overall styling
+.navbar {
+    font-family: 'Orbitron';
+    border-radius: 0;
+    border: none;
+    min-height: 84px !important;
+    a:first-child { // Underlines all navbar links except the first, I don't know why.
+        &:active span, &:focus span {
+            border-bottom: 2px solid $secondary;
+        }
+    }
+    @media only screen and (max-width : 768px) {
+        background-color: Indigo !important;
+        border-bottom: 2px solid $primary !important;
+    }
+}
+
+#counter {
+}
+
+// Custom navbar height
 .navbar-nav > li > a, .navbar-brand {
     padding-top: 32px !important;
     padding-bottom: 0 !important;
@@ -7,10 +27,18 @@
     height: 84px;
 }
 
+// Transparent navbar by default (Don't knwo why I'm using navbar-inverse though)
+.navbar-inverse {
+    background-color: rgba(255, 255, 255, 0);
+    border-bottom: 2px solid rgba(255, 255, 255, 0);
+}
+
+// Font size adjustment
 .navbar-nav > li > a{
     font-size: 16px;
 }
 
+// Animated hamburger menu
 .navbar-toggle {
     margin-top: 23px !important;
     border: none;
@@ -63,27 +91,6 @@
             -ms-transform: rotate(0);
                 transform: rotate(0);
     }
-}
-
-.navbar {
-    font-family: 'Orbitron';
-    border-radius: 0;
-    border: none;
-    min-height: 84px !important;
-    a:first-child { // Why?
-        &:active span, &:focus span {
-            border-bottom: 2px solid $secondary;
-        }
-    }
-    @media only screen and (max-width : 768px) {
-        background-color: Indigo !important;
-        border-bottom: 2px solid $primary !important;
-    }
-}
-
-.navbar-inverse {
-    background-color: rgba(255, 255, 255, 0);
-    border-bottom: 2px solid rgba(255, 255, 255, 0);
 }
 
 .navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse {

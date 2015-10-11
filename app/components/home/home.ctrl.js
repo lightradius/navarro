@@ -26,6 +26,7 @@
         vm.typeMo = typeMo;
         vm.reset = reset;
         vm.dollarClick = dollarClick;
+        vm.zero = zero;
 
         // vm.colorize = colorize;
 
@@ -75,9 +76,7 @@
         activate();
 
         function activate() {
-
             vm.type();
-
 
             var waypoint = new Waypoint({
                 element: document.getElementById('home'),
@@ -89,6 +88,13 @@
             });
         }
 
+        function zero(number) {
+            var str = '' + number;
+            while (str.length < 3) {
+                str = '0' + str;
+            }
+            return str;
+        }
 
         function bounce(elem) {
             console.log('Bounce.');
@@ -151,9 +157,9 @@
 
         function typeMo() {
             $(".typed").typed({
-                strings: ["test"],
-                startDelay: 2000,
-                typeSpeed: 40,
+                strings: ["Ouch^100!"],
+                startDelay: 0,
+                typeSpeed: 0,
                 backDelay: 1200,
                 backSpeed: 30,
                 cursorChar: '_'

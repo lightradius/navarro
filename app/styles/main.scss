@@ -11,15 +11,15 @@ $secondary: LimeGreen;
 $background: #111;
 $subtle: #333;
 
-
-// fonts
-
 @import "animations";
 @import "navbar";
 @import "footer";
 @import "compass";
 
-/* Basic Elements */
+/*
+ * Basic elements
+ */
+
 body {
     height: 100%;
     color: white;
@@ -40,13 +40,13 @@ h2 {
     font-size: 36px;
 }
 
-h3 {
-    font-size: 30px;
-}
-
 a:hover {
     color: white;
 }
+
+/*
+ * Helper classes
+ */
 
 .unselectable {
    -moz-user-select: none;
@@ -54,6 +54,10 @@ a:hover {
    -webkit-user-select: none;
    -ms-user-select: none;
    user-select: none;
+}
+
+.box-shadow {
+    box-shadow: 0 2px 0 grey;
 }
 
 /* structural and helper classes */
@@ -73,13 +77,6 @@ a:hover {
     border-top: 1px solid #e5e5e5;
 }
 
-.card {
-    color: purple;
-    background-color: aquamarine;
-    height: 400px;
-    box-shadow: 0 2px grey;
-}
-
 .section {
     // margin-top: 84px;
     height: 600px;
@@ -90,25 +87,56 @@ a:hover {
     color: $primary;
 }
 
-/* pages */
-// page 1
+/*
+ * Page Sections
+ */
+
+// Home
 #home {
     height: 660px;
     background-image: radial-gradient(
         circle at top right,
         $primary,
         #2E0854
-      );
+    );
+    position: relative;
+    #arrow {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        margin-bottom: 15px;
+        h3 {
+            width: 0px;
+            margin: 0 auto;
+            a {
+                color: $secondary;
+                &:hover {
+                  color: white;
+                }
+            }
+        }
+    }
 }
 
-.grid {
-    background: url("../assets/img/pattern.png") repeat;
-    // background-color: green;
-}
-
+// About
 #about {
-    background-color: white;
+    padding: 25px 15px;
+    background-color: #E5DFF2;
+    .card {
+        h3 {
+            color: DarkGoldenRod;
+        }
+        margin-bottom: 25px;
+        color: #555;
+        background-color: Oldlace;
+        padding: 20px;
+    }
 }
+
+
+// .grid {
+//     background: url("../assets/img/pattern.png") repeat;
+// }
 
 .lead-image {
     height: 100%;
@@ -156,72 +184,6 @@ a:hover {
     display: none;
 }
 
-#arrow {
-    height: 80px;
-    a {
-        color: $primary;
-        &:hover {
-            color: white;
-        }
-    }
-    // position: relative;
-    // top: 100%;
-    // transform: translateY(-50%);
-    // transform: translateX(-50%);
 
-}
 
-/* Large Devices, Wide Screens */
-@media only screen and (max-width : 1200px) {
-    #home, .grid {
-        height: 700px;
-    }
-    h2 {
-        font-size: 70px;
-    }
-    a {
-        font-size: 16px;
-    }
-}
-
-/* Medium Devices, Desktops */
-@media only screen and (max-width : 992px) {
-    #home, .grid {
-        height: 600px;
-    }
-    h2 {
-        font-size: 50px;
-    }
-    a {
-        font-size: 14px;
-    }
-}
-
-/* Small Devices, Tablets */
-@media only screen and (max-width : 768px) {
-    #home, .grid {
-        height: 540px;
-    }
-    h2 {
-        font-size: 40px;
-    }
-    a {
-        font-size: 14px;
-    }
-}
-
-/* Extra Small Devices, Phones */
-@media only screen and (max-width : 480px) {
-    h2 {
-        font-size: 30px;
-    }
-    a {
-        font-size: 14px;
-    }
-
-}
-
-/* Custom, iPhone Retina */
-@media only screen and (max-width : 320px) {
-
-}
+@import "media-queries";

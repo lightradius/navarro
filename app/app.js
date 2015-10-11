@@ -21,7 +21,6 @@
             'ngSanitize',
             'ngTouch',
             'ui.router',
-            'angular-parallax',
             'smoothScroll'
         ]);
 })();

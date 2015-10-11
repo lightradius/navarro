@@ -1,55 +1,35 @@
-
+<div ng-include src="'shared/navbar/navbar.html'"></div>
 <div class="achievement fadeIn"></div>
 <div class="container-fluid">
-    <div id="home" class="row">
+    <div id="home" class="row box-shadow">
         <div id="splash" class="animated fadeIn col-xs-10 col-xs-offset-1 ">
             <h2 class="lead-text"><span id="dollar" class="unselectable" ng-click="vm.dollarClick()">$ </span><span class="typed"></span></h2>
         </div>
+        <div id="arrow">
+            <h3><a href=""><i class="fa fa-2x fa-angle-down smooth" id="" scroll-to="about" duration="800"></i></a></h3>
+        </div>
     </div>
-</div>
-<div id="arrow" class="text-center unselectable">
-    <h3><a href=""><i class="fa fa-2x fa-chevron-down smooth" scroll-to="about" duration="800"></i></a></h3>
-</div>
-<div id="about" class="container-fluid section text-center">
-    <div class="col-md-4">
-        <h3>Consistency</h3>
-        <i class="fa fa-4x fa-cog"></i>
-        <p></p>
-    </div>
-    <div class="col-md-4">
-        <h3>Modularity</h3>
-        <i class="fa fa-4x fa-cubes"></i>
-        <p></p>
-    </div>
-    <div class="col-md-4">
-        <h3>Performace</h3>
-        <i class="fa fa-4x fa-cube"></i>
-        <p></p>
-    </div>
-</div>
-<div id="three-eyed" class="container-fluid section">
-    <div class="col-md-4">
-        <h3 class="text-center">Consistency</h3>
-        <i class="fa fa-2x fa-exchange"></i>
-        <p>
-            Lorem Ipsum
-        </p>
-    </div>
-    <div class="col-md-4"><h3 class="text-center">Modularity</h3></div>
-    <div class="col-md-4">
-        <h3 class="text-center">Transparency</h3>
-    </div>
-</div>
-<div id="three" class="container-fluid section">
-    <div class="col-md-4">
-        <h3 class="text-center">Consistency</h3>
-        <i class="fa fa-2x fa-exchange"></i>
-        <p>
-            Lorem Ipsum
-        </p>
-    </div>
-    <div class="col-md-4"><h3 class="text-center">Modularity</h3></div>
-    <div class="col-md-4">
-        <h3 class="text-center">Transparency</h3>
+    <div class="row grid" id="about">
+        <div class="col-md-4">
+            <div class="card box-shadow">
+                <h3>Consistency <i class="fa fa-close pull-right"></i></h3>
+                <i class="fa fa-4x fa-cog"></i>
+                <p></p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card box-shadow">
+                <h3>Modularity <i class="fa fa-close pull-right"></i></h3>
+                <i class="fa fa-4x fa-cubes"></i>
+                <p></p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card box-shadow">
+                <h3>Performace <i class="fa fa-close pull-right"></i></h3>
+                <i class="fa fa-4x fa-cube"></i>
+                <p></p>
+            </div>
+        </div>
     </div>
 </div>
