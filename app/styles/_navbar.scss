@@ -11,7 +11,7 @@
     }
     @media only screen and (max-width : 768px) {
         background-color: Indigo !important;
-        border-bottom: 2px solid $primary !important;
+        border-bottom: 2px solid $light-purple !important;
     }
 }
 
@@ -99,7 +99,7 @@
 
 .dark {
     background-color: Indigo !important;
-    border-bottom: 2px solid $primary;
+    border-bottom: 2px solid $light-purple;
 }
 
 // Earlier navbar collapse

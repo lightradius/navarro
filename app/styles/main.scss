@@ -6,7 +6,8 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "compass";
 
 // colors
-$primary: BlueViolet;
+$light-purple: BlueViolet;
+$dark-purple: #2E0854;
 $secondary: LimeGreen;
 $background: #111;
 $subtle: #333;
@@ -84,7 +85,7 @@ a:hover {
 
 .text-bold {
     font-weight: 900;
-    color: $primary;
+    color: $light-purple;
 }
 
 /*
@@ -96,8 +97,8 @@ a:hover {
     height: 660px;
     background-image: radial-gradient(
         circle at top right,
-        $primary,
-        #2E0854
+        $light-purple,
+        $dark-purple
     );
     position: relative;
     #arrow {
@@ -123,13 +124,17 @@ a:hover {
     padding: 25px 15px;
     background-color: #E5DFF2;
     .card {
-        h3 {
-            color: DarkGoldenRod;
-        }
         margin-bottom: 25px;
-        color: #555;
         background-color: Oldlace;
         padding: 20px;
+        color: black;
+        &:hover {
+            position: relative;
+            top: -2px;
+        }
+        h3 {
+            color: $dark-purple;
+        }
     }
 }
 

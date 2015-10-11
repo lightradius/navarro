@@ -124,7 +124,6 @@
         // } */
 
         function dollarClick() {
-            console.log(1);
             var elem = $('<span class="typed"></span>');
 
             $('.typed').remove();
