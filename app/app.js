@@ -14,12 +14,6 @@
 
     angular
         .module('navarroApp', [
-            'ngAnimate',
-            'ngMessages',
-            'ngResource',
-            'ngRoute',
-            'ngSanitize',
-            'ngTouch',
             'ui.router',
             'smoothScroll'
         ]);

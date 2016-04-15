@@ -31,8 +31,7 @@
         // vm.colorize = colorize;
 
         vm.strings = [
-            "Hello world^600!",
-            "Here be web dev"
+            "Hello world^600!"
             // "specialized in both business and personal landing pages",
             // "sleek and simple designs, built using true and tested web frameworks",
             // "got an idea for a single page web application? Send us a holler and we can discuss it",

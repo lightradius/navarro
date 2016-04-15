@@ -1,6 +1,7 @@
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+@import "font-awesome/scss/font-awesome.scss";
 // endbower
 
 @import "compass";
@@ -95,12 +96,13 @@ a:hover {
 // Home
 #home {
     height: 660px;
+    position: relative;
     background-image: radial-gradient(
         circle at top right,
         $light-purple,
         $dark-purple
     );
-    position: relative;
+
     #arrow {
         position: absolute;
         bottom: 0;
@@ -118,7 +120,6 @@ a:hover {
         }
     }
 }
-
 // About
 #about {
     padding: 25px 15px;
@@ -189,6 +190,33 @@ a:hover {
     display: none;
 }
 
+.arrow_box {
+	position: relative;
+	background: #88b7d5;
+	border: 4px solid #c2e1f5;
+}
+.arrow_box:after, .arrow_box:before {
+	top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
 
+.arrow_box:after {
+	border-color: rgba(136, 183, 213, 0);
+	border-top-color: #88b7d5;
+	border-width: 30px;
+	margin-left: -30px;
+}
+.arrow_box:before {
+	border-color: rgba(194, 225, 245, 0);
+	border-top-color: #c2e1f5;
+	border-width: 36px;
+	margin-left: -36px;
+}
 
 @import "media-queries";
