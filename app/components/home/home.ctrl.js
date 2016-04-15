@@ -102,25 +102,25 @@
             $this = reset($this);
             $this.addClass('bounce animated');
         }
-/*
-        // setInterval(function() {
-        //     bounce($('#arrow'));
-        // }, 6000);
 
-        // function colorize(elem) {
-        //     var r = randomize();
-        //     var g = randomize();
-        //     var b = randomize();
-        //     var mix = 256;
-        //
-        //     r = (r + mix) / 2;
-        //     g = (g + mix) / 2;
-        //     b = (b + mix) / 2;
-        //
-        //     var color = 23;
-        //
-        //     $(elem).css('background-color', );
-        // } */
+        setInterval(function() {
+            bounce($('#arrow'));
+        }, 8000);
+
+        function colorize(elem) {
+            var r = randomize();
+            var g = randomize();
+            var b = randomize();
+            var mix = 256;
+
+            r = (r + mix) / 2;
+            g = (g + mix) / 2;
+            b = (b + mix) / 2;
+
+            var color = 23;
+
+            $(elem).css('background-color', color);
+        }
 
         function dollarClick() {
             var elem = $('<span class="typed"></span>');
