@@ -31,7 +31,7 @@
                 })
                 .state('404', {
                     url: '/404',
-                    templateUrl: dir + '404/404.view.html',
+                    templateUrl: dir + '404/404View.html',
                 });
         });
 })();

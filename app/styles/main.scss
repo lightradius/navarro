@@ -14,6 +14,8 @@ $subtle: #333;
 
 @import "animations";
 @import "navbar";
+@import "home";
+@import "contact";
 @import "footer";
 @import "compass";
 
@@ -25,11 +27,8 @@ body {
     height: 100%;
     color: white;
     background-color: $background;
-    // margin-top: 80px;
     font-family: 'Open Sans';
-    // font-size: 1.8em;
     font-weight: 100;
-    /* Needed to stop white horizontal strips from showing under the parallax when scrolling up too fast */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -92,33 +91,7 @@ a:hover {
  * Page Sections
  */
 
-// Home
-#home {
-    height: 660px;
-    position: relative;
-    background-image: radial-gradient(
-        circle at top right,
-        $light-purple,
-        $dark-purple
-    );
 
-    #arrow {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        margin-bottom: 15px;
-        h3 {
-            width: 0px;
-            margin: 0 auto;
-            a {
-                color: $secondary;
-                &:hover {
-                  color: white;
-                }
-            }
-        }
-    }
-}
 // About
 #about {
     padding: 25px 15px;
@@ -128,10 +101,6 @@ a:hover {
         background-color: Oldlace;
         padding: 20px;
         color: black;
-        &:hover {
-            position: relative;
-            top: -2px;
-        }
         h3 {
             color: $dark-purple;
         }
