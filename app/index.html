@@ -19,7 +19,7 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,600,700,800' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Orbitron:400,900,700,500' rel='stylesheet' type='text/css'>
 </head>
-<body ng-app="navarroApp" ng-controller="navarroCtrl">
+<body ng-app="navarroApp">
     <!--[if lt IE 7]>
     <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -54,8 +54,8 @@
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="app.js"></script>
     <script src="conf.js"></script>
-    <script src="main.ctrl.js"></script>
     <!-- app components -->
+    <script src="shared/http.factory.js"></script>
     <script src="components/contact/contact.js"></script>
     <script src="components/about/about.ctrl.js"></script>
     <script src="components/home/home.ctrl.js"></script>

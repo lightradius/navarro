@@ -14,9 +14,9 @@
         .module('navarroApp')
         .controller('HomeCtrl', Controller);
 
-    Controller.$inject = ['$anchorScroll', '$location', '$rootScope', '$scope', '$state'];
+    Controller.$inject = ['$anchorScroll', '$location', '$rootScope', '$scope', '$state', 'httpFactory'];
 
-    function Controller($anchorScroll, $location, $rootScope, $scope, $state) {
+    function Controller($anchorScroll, $location, $rootScope, $scope, $state, httpFactory) {
 
         var vm = this;
 
@@ -33,6 +33,8 @@
         vm.strings = [
             "Hello world^600!"
         ];
+
+        vm.extraStrings = httpFactory.get( 'strings.json' );
 
         vm.scrollTo = function(id) {
             console.log('Scrolling to %s', id);
@@ -82,9 +84,9 @@
             $this.addClass('bounce animated');
         }
 
-        setInterval(function() {
-            bounce($('#arrow'));
-        }, 8000);
+        // setInterval(function() {
+        //     bounce($('#arrow'));
+        // }, 8000);
 
         function colorize(elem) {
             var r = randomize();
