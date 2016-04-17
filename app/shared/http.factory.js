@@ -22,8 +22,7 @@
                 .catch( httpGetFailed ) ;
 
             function httpGetComplete( response ) {
-                console.log( response );
-                return response.data.results;
+                return response.data;
             }
 
             function httpGetFailed( error ) {

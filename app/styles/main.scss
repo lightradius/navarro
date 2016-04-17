@@ -25,6 +25,9 @@ $subtle: #333;
 /*
  * Basic elements
  */
+html {
+    overflow-x: hidden;
+}
 
 body {
     height: 100%;
@@ -90,28 +93,6 @@ a:hover {
     color: $light-purple;
 }
 
-#splash {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    select: none;
-    h2 {
-        font-weight: bold;
-        color: white;
-        font-size: 60px;
-        padding-left: 24px;
-        // text-shadow: 0px 0px 4px black;
-        // text-shadow: 0px 0px 16px black;
-    }
-    a {
-        font-size: 24px;
-        color: white;
-        cursor: default;
-        &:hover, &:active {
-            text-decoration: none;
-        }
-    }
-}
 
 #dollar {
     color: $secondary;

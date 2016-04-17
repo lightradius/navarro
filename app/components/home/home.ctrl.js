@@ -21,20 +21,14 @@
         var vm = this;
 
         vm.dollars = 0;
-        vm.bounce = bounce;
+        // vm.bounce = bounce;
         vm.type = type;
-        vm.typeMo = typeMo;
+        // vm.typeMo = typeMo;
         vm.reset = reset;
         vm.dollarClick = dollarClick;
         vm.zero = zero;
 
         // vm.colorize = colorize;
-
-        vm.strings = [
-            "Hello world^600!"
-        ];
-
-        vm.extraStrings = httpFactory.get( 'strings.json' );
 
         vm.scrollTo = function(id) {
             console.log('Scrolling to %s', id);
@@ -50,13 +44,20 @@
             $('.typed').remove();
             $('.typed-cursor').remove();
             $('.lead-text').append(elem);
-            vm.typeMo();
+            vm.type( {
+                strings: ["Ouch^100!"],
+                startDelay: 2000,
+                typeSpeed: 40,
+                backDelay: 1200,
+                backSpeed: 30,
+                cursorChar: '_'
+            } );
         }
 
         activate();
 
         function activate() {
-            vm.type();
+            getStrings();
 
             var waypoint = new Waypoint({
                 element: document.getElementById('home'),
@@ -68,6 +69,21 @@
             });
         }
 
+
+        function getStrings() {
+            return httpFactory.get( 'strings.json' )
+            .then(function(data) {
+                vm.type( {
+                    strings: data,
+                    startDelay: 2000,
+                    typeSpeed: 40,
+                    backDelay: 1200,
+                    backSpeed: 30,
+                    cursorChar: '_'
+                } );
+            })
+        }
+
         function zero(number) {
             var str = '' + number;
             while (str.length < 3) {
@@ -76,13 +92,13 @@
             return str;
         }
 
-        function bounce(elem) {
-            console.log('Bounce.');
-            var $this = elem;
-            $this.removeClass('bounce animated');
-            $this = reset($this);
-            $this.addClass('bounce animated');
-        }
+        // function bounce(elem) {
+        //     console.log('Bounce.');
+        //     var $this = elem;
+        //     $this.removeClass('bounce animated');
+        //     $this = reset($this);
+        //     $this.addClass('bounce animated');
+        // }
 
         // setInterval(function() {
         //     bounce($('#arrow'));
@@ -123,26 +139,8 @@
             return $newElem;
         }
 
-        function type() {
-            $(".typed").typed({
-                strings: vm.strings,
-                startDelay: 2000,
-                typeSpeed: 40,
-                backDelay: 1200,
-                backSpeed: 30,
-                cursorChar: '_'
-            });
-        }
-
-        function typeMo() {
-            $(".typed").typed({
-                strings: ["Ouch^100!"],
-                startDelay: 0,
-                typeSpeed: 0,
-                backDelay: 1200,
-                backSpeed: 30,
-                cursorChar: '_'
-            });
+        function type( settings ) {
+            $(".typed").typed( settings );
         }
     }
 })();
