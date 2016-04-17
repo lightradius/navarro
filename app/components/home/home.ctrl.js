@@ -1,12 +1,3 @@
-'use strict';
-
-/**
-* @ngdoc function
-* @name navarroApp.controller:MainCtrl
-* @description
-* # MainCtrl
-* Controller of the navarroApp
-*/
 (function() {
     'use strict';
 
@@ -19,6 +10,15 @@
     function Controller($anchorScroll, $location, $rootScope, $scope, $state, httpFactory) {
 
         var vm = this;
+
+        var idleTime = 0;
+
+        function timerIncrement() {
+            idleTime = idleTime + 1;
+            if (idleTime > 5) { // 5 seconds
+                console.log('still there?');
+            }
+        }
 
         vm.dollars = 0;
         // vm.bounce = bounce;
@@ -40,14 +40,26 @@
             vm.dollars++;
             console.log('Dollars: %s', vm.dollars);
             var elem = $('<span class="typed"></span>');
+            let strings;
 
             $('.typed').remove();
             $('.typed-cursor').remove();
             $('.lead-text').append(elem);
+
+            let rand = Math.random();
+
+            if (rand < 0.02) {
+                strings = ["Stop poking me^100!"]
+            } else if ( rand < 0.1 ) {
+                strings = ["Stop it^100!"]
+            } else {
+                strings = ["Ouch^100!"];
+            }
+
             vm.type( {
-                strings: ["Ouch^100!"],
-                startDelay: 2000,
-                typeSpeed: 40,
+                strings: strings,
+                startDelay: 0,
+                typeSpeed: 0,
                 backDelay: 1200,
                 backSpeed: 30,
                 cursorChar: '_'
@@ -58,6 +70,17 @@
 
         function activate() {
             getStrings();
+
+            //Increment the idle time counter every second.
+            var idleInterval = setInterval(timerIncrement, 1000); // 1 second
+
+            //Zero the idle timer on mouse movement.
+            $(document).mousemove(function (e) {
+                idleTime = 0;
+            });
+            $(document).keypress(function (e) {
+                idleTime = 0;
+            });
 
             var waypoint = new Waypoint({
                 element: document.getElementById('home'),
