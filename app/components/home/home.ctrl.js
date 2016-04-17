@@ -1,12 +1,3 @@
-'use strict';
-
-/**
-* @ngdoc function
-* @name navarroApp.controller:MainCtrl
-* @description
-* # MainCtrl
-* Controller of the navarroApp
-*/
 (function() {
     'use strict';
 
@@ -14,25 +5,30 @@
         .module('navarroApp')
         .controller('HomeCtrl', Controller);
 
-    Controller.$inject = ['$anchorScroll', '$location', '$rootScope', '$scope', '$state'];
+    Controller.$inject = ['$anchorScroll', '$location', '$rootScope', '$scope', '$state', 'httpFactory'];
 
-    function Controller($anchorScroll, $location, $rootScope, $scope, $state) {
+    function Controller($anchorScroll, $location, $rootScope, $scope, $state, httpFactory) {
 
         var vm = this;
 
+        var idleTime = 0;
+
+        function timerIncrement() {
+            idleTime = idleTime + 1;
+            if (idleTime > 5) { // 5 seconds
+                console.log('still there?');
+            }
+        }
+
         vm.dollars = 0;
-        vm.bounce = bounce;
+        // vm.bounce = bounce;
         vm.type = type;
-        vm.typeMo = typeMo;
+        // vm.typeMo = typeMo;
         vm.reset = reset;
         vm.dollarClick = dollarClick;
         vm.zero = zero;
 
         // vm.colorize = colorize;
-
-        vm.strings = [
-            "Hello world^600!"
-        ];
 
         vm.scrollTo = function(id) {
             console.log('Scrolling to %s', id);
@@ -44,17 +40,47 @@
             vm.dollars++;
             console.log('Dollars: %s', vm.dollars);
             var elem = $('<span class="typed"></span>');
+            let strings;
 
             $('.typed').remove();
             $('.typed-cursor').remove();
             $('.lead-text').append(elem);
-            vm.typeMo();
+
+            let rand = Math.random();
+
+            if (rand < 0.02) {
+                strings = ["Stop poking me^100!"]
+            } else if ( rand < 0.1 ) {
+                strings = ["Stop it^100!"]
+            } else {
+                strings = ["Ouch^100!"];
+            }
+
+            vm.type( {
+                strings: strings,
+                startDelay: 0,
+                typeSpeed: 0,
+                backDelay: 1200,
+                backSpeed: 30,
+                cursorChar: '_'
+            } );
         }
 
         activate();
 
         function activate() {
-            vm.type();
+            getStrings();
+
+            //Increment the idle time counter every second.
+            var idleInterval = setInterval(timerIncrement, 1000); // 1 second
+
+            //Zero the idle timer on mouse movement.
+            $(document).mousemove(function (e) {
+                idleTime = 0;
+            });
+            $(document).keypress(function (e) {
+                idleTime = 0;
+            });
 
             var waypoint = new Waypoint({
                 element: document.getElementById('home'),
@@ -66,6 +92,21 @@
             });
         }
 
+
+        function getStrings() {
+            return httpFactory.get( 'strings.json' )
+            .then(function(data) {
+                vm.type( {
+                    strings: data,
+                    startDelay: 2000,
+                    typeSpeed: 40,
+                    backDelay: 1200,
+                    backSpeed: 30,
+                    cursorChar: '_'
+                } );
+            })
+        }
+
         function zero(number) {
             var str = '' + number;
             while (str.length < 3) {
@@ -74,17 +115,17 @@
             return str;
         }
 
-        function bounce(elem) {
-            console.log('Bounce.');
-            var $this = elem;
-            $this.removeClass('bounce animated');
-            $this = reset($this);
-            $this.addClass('bounce animated');
-        }
+        // function bounce(elem) {
+        //     console.log('Bounce.');
+        //     var $this = elem;
+        //     $this.removeClass('bounce animated');
+        //     $this = reset($this);
+        //     $this.addClass('bounce animated');
+        // }
 
-        setInterval(function() {
-            bounce($('#arrow'));
-        }, 8000);
+        // setInterval(function() {
+        //     bounce($('#arrow'));
+        // }, 8000);
 
         function colorize(elem) {
             var r = randomize();
@@ -121,26 +162,8 @@
             return $newElem;
         }
 
-        function type() {
-            $(".typed").typed({
-                strings: vm.strings,
-                startDelay: 2000,
-                typeSpeed: 40,
-                backDelay: 1200,
-                backSpeed: 30,
-                cursorChar: '_'
-            });
-        }
-
-        function typeMo() {
-            $(".typed").typed({
-                strings: ["Ouch^100!"],
-                startDelay: 0,
-                typeSpeed: 0,
-                backDelay: 1200,
-                backSpeed: 30,
-                cursorChar: '_'
-            });
+        function type( settings ) {
+            $(".typed").typed( settings );
         }
     }
 })();

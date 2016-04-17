@@ -1,0 +1,41 @@
+.interlude {
+    top: -25px;
+    background-color: $light-background;
+    height: 50px;
+    width: 50%;
+    position: relative;
+    &.left {
+        right: 25px !important;
+    }
+    &.right {
+        right: -25px !important;
+    }
+}
+.interlude.right:before {
+    content: '';
+    line-height: 0;
+    font-size: 0;
+    width: 0;
+    height: 0;
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid $light-background;
+    border-left: 25px solid transparent;
+    border-right: 25px solid $light-background;
+    position: absolute;
+    top: 0;
+    left: -50px;
+}
+.interlude.left:after {
+    content: '';
+    line-height: 0;
+    font-size: 0;
+    width: 0;
+    height: 0;
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid $light-background;
+    border-left: 25px solid $light-background;
+    border-right: 25px solid transparent;
+    position: absolute;
+    top: 0;
+    right: -50px;
+}

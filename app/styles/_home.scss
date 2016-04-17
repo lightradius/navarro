@@ -1,6 +1,6 @@
 // Home
 #home {
-    height: 660px;
+    height: 760px;
     position: relative;
     background-image: radial-gradient(
         circle at top right,
@@ -8,20 +8,37 @@
         $dark-purple
     );
 
+    #splash {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        select: none;
+        h2 {
+            font-weight: bold;
+            color: white;
+            font-size: 60px;
+            padding-left: 24px;
+            // text-shadow: 0px 0px 4px black;
+            // text-shadow: 0px 0px 16px black;
+        }
+        a {
+            font-size: 24px;
+            color: white;
+            cursor: default;
+            &:hover, &:active {
+                text-decoration: none;
+            }
+        }
+    }
+
     #arrow {
         position: absolute;
-        bottom: 0;
-        width: 100%;
-        margin-bottom: 15px;
-        h3 {
-            width: 0px;
-            margin: 0 auto;
-            a {
-                color: $secondary;
-                &:hover {
-                  color: white;
-                }
-            }
+        color: $secondary;
+        bottom: -2px;
+        left: 50%;
+        transform: translate( -50% );
+        &:hover {
+          color: white;
         }
     }
 }
