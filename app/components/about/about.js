@@ -3,13 +3,13 @@
 
     angular
         .module('navarroApp')
-        .directive('contact', directive);
+        .directive('about', directive);
 
     /* @ngInject */
     function directive() {
         var directive = {
             restrict: 'EA',
-            templateUrl: 'components/contact/contact.html',
+            templateUrl: 'components/about/about.html',
             scope: {
             },
             link: linkFunc,
@@ -34,7 +34,7 @@
         activate();
 
         function activate() {
-            console.log('contact section loaded');
+            console.log('about section loaded');
         }
     }
 })();

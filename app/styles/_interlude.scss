@@ -1,14 +1,14 @@
 .interlude {
-    top: -25px;
+    top: -35px;
     background-color: $light-background;
     height: 50px;
     width: 50%;
     position: relative;
     &.left {
-        right: 25px !important;
+        right: 35px !important;
     }
     &.right {
-        right: -25px !important;
+        right: -35px !important;
     }
 }
 .interlude.right:before {

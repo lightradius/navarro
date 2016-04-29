@@ -5,44 +5,12 @@
         <div id="splash" class="animated fadeIn col-xs-10 col-xs-offset-1 ">
             <h2 class="lead-text"><span id="dollar" class="unselectable" ng-click="vm.dollarClick()">$ </span><span class="typed"></span></h2>
         </div>
-        <i id="arrow" class="fa fa-3x fa-angle-down smooth" scroll-to="about" duration="800"></i>
+        <!-- <i id="arrow" class="fa fa-3x fa-angle-down smooth" scroll-to="about" duration="800"></i> -->
     </div>
 </div>
 <div class="interlude pull-left left"></div>
 <div class="interlude pull-right right"></div>
 
-<div class="container-fluid">
-    <div class="row grid" id="about">
-        <div class="col-lg-4">
-            <div class="card box-shadow">
-                <h3>Consistency <i class="fa fa-check pull-right"></i></h3>
-                <div class="row">
-                    <div class="col-md-12">
-                        <p>We work with true and tested frameworks and libraries to ensure maximum compatibility across any number of devices, ensuring that your application works exactly as you want it to, all the time.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4">
-            <div class="card box-shadow">
-                <h3>Modularity <i class="fa fa-check pull-right"></i></h3>
-                <div class="row">
-                    <div class="col-md-12">
-                        <p>Ipsum do est quis beef short loin cupidatat meatball anim beef ribs dolore kielbasa. Tenderloin sint pork belly, picanha cupidatat cupim exercitation. Consequat laboris labore occaecat.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4">
-            <div class="card box-shadow">
-                <h3>Performace <i class="fa fa-check pull-right"></i></h3>
-                <div class="row">
-                    <div class="col-md-12">
-                        <p>Ipsum do est quis beef short loin cupidatat meatball anim beef ribs dolore kielbasa. Tenderloin sint pork belly, picanha cupidatat cupim exercitation. Consequat laboris labore occaecat.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<about></about>
 <contact></contact>
+<div ng-include src="'shared/footer/footer.html'"></div>

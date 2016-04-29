@@ -84,9 +84,13 @@
 
             var waypoint = new Waypoint({
                 element: document.getElementById('home'),
-                handler: function(direction) {
-                    console.log('at the top');
-                    $('.navbar').toggleClass('dark');
+                handler: function( direction ) {
+                    if ( direction === 'up' ) {
+                        $('.navbar').removeClass('dark');
+                    } else {
+                        $('.navbar').addClass('dark');
+                    }
+                    console.log( direction );
                 },
                 offset: '-1%' // Otherwise never triggered when scrolling back to top
             });
