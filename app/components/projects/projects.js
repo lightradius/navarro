@@ -3,13 +3,13 @@
 
     angular
         .module('navarroApp')
-        .directive('about', directive);
+        .directive('projects', directive);
 
     /* @ngInject */
     function directive() {
         var directive = {
             restrict: 'EA',
-            templateUrl: 'components/about/about.html',
+            templateUrl: 'components/projects/projects.html',
             scope: {
             },
             link: linkFunc,
@@ -34,20 +34,7 @@
         activate();
 
         function activate() {
-            console.log('about section loaded');
-
-            let draw = 7;
-            let deck = 60;
-            let mulligan = 2;
-
-            for ( let i = 0, mulligan; i < mulligan; i++ ) {
-                console.log(i);
-                for ( let j = 0, draw; j < ( draw - i ); j++ ) {
-                    let newProb = ( ( deck - j + 1 ) / ( deck - j + 1 ) );
-                    let prob = prob ? prob * newProb : newProb;
-                    console.log( prob );
-                }
-            }
+            console.log('projects section loaded');
         }
     }
 })();

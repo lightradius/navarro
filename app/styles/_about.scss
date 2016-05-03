@@ -1,7 +1,14 @@
 // About
 #about {
-    padding: 40px 15px;
-    background-color: #E5DFF2;
+    padding: 25px 15px;
+    padding-top: 120px;
+    background-color: $light-background;
+    h1, h2, h3 {
+        text-align: center;
+        padding: 20px;
+        color: $slate-blue;
+        text-shadow: 1px 1px 0 grey;
+    }
     .card {
         margin-bottom: 25px;
         background-color: Oldlace;

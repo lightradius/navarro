@@ -1,6 +1,6 @@
 // Home
 #home {
-    height: 760px;
+    height: 850px;
     position: relative;
     background-image: radial-gradient(
         circle at top right,
@@ -8,18 +8,36 @@
         $dark-purple
     );
 
+    .circle {
+        z-index: 999;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 100%;
+    	border-radius: 50%;
+    	width: 120px;
+    	height: 120px;
+        &:hover {
+            background-image: radial-gradient(
+                circle at center,
+                rgba(255,255,255,0.2),
+                rgba(0,0,0,0)
+            );
+        }
+    }
+
     #splash {
         position: absolute;
         top: 50%;
+        padding-bottom: 50px;
         transform: translateY(-50%);
         select: none;
         h2 {
             font-weight: bold;
             color: white;
-            font-size: 60px;
+            font-size: 45px;
             padding-left: 24px;
-            // text-shadow: 0px 0px 4px black;
-            // text-shadow: 0px 0px 16px black;
+            text-shadow: 1px 1px 0px black;
         }
         a {
             font-size: 24px;

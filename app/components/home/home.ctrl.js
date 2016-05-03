@@ -15,7 +15,7 @@
 
         function timerIncrement() {
             idleTime = idleTime + 1;
-            if (idleTime > 5) { // 5 seconds
+            if (idleTime > 60 * 5) { // 5 minutes
                 console.log('still there?');
             }
         }
