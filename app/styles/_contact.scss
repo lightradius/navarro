@@ -4,11 +4,11 @@
         $light-purple,
         $dark-purple
     );
-    padding: 30px;
     ul {
         list-style: none;
+        padding: 0;
         li {
-            padding: 18px;
+            padding: 18px 0;
             font-family: Orbitron;
             font-size: 24px;
             font-weight: bold;

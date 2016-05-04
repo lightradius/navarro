@@ -1,14 +1,14 @@
 .interlude {
-    top: -50px;
+    top: -36px;
     background-color: $light-background;
-    height: 50px;
+    height: 36px;
     width: 50%;
     position: relative;
     &.left {
-        right: 50px !important;
+        right: 36px !important;
     }
     &.right {
-        right: -50px !important;
+        right: -36px !important;
     }
 }
 .interlude.right:before {
@@ -17,13 +17,13 @@
     font-size: 0;
     width: 0;
     height: 0;
-    border-top: 25px solid transparent;
-    border-bottom: 25px solid $light-background;
-    border-left: 25px solid transparent;
-    border-right: 25px solid $light-background;
+    border-top: 18px solid transparent;
+    border-bottom: 18px solid $light-background;
+    border-left: 18px solid transparent;
+    border-right: 18px solid $light-background;
     position: absolute;
     top: 0;
-    left: -50px;
+    left: -36px;
 }
 .interlude.left:after {
     content: '';
@@ -31,11 +31,11 @@
     font-size: 0;
     width: 0;
     height: 0;
-    border-top: 25px solid transparent;
-    border-bottom: 25px solid $light-background;
-    border-left: 25px solid $light-background;
-    border-right: 25px solid transparent;
+    border-top: 18px solid transparent;
+    border-bottom: 18px solid $light-background;
+    border-left: 18px solid $light-background;
+    border-right: 18px solid transparent;
     position: absolute;
     top: 0;
-    right: -50px;
+    right: -36px;
 }
