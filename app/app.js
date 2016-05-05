@@ -15,6 +15,7 @@
     angular
         .module('navarroApp', [
             'ui.router',
-            'smoothScroll'
+            'smoothScroll',
+            'angular-parallax'
         ]);
 })();

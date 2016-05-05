@@ -5,7 +5,7 @@
 
     angular
         .module('navarroApp')
-        .run(function() {
+        .run( function() {
             // force reload at top top prevent erroneous navbar styles
             window.onbeforeunload = function(){
             	window.scrollTo( 0, 0 );

@@ -1,24 +1,25 @@
 {
-    "name": "navarro",
-    "version": "0.0.0",
-    "dependencies": {
-        "angular": "^1.5.3",
-        "angular-ui-router": "^1.0.0",
-        "animateCSS": "^1.2.1",
-        "bootstrap-sass-official": "^3.2.0",
-        "ngSmoothScroll": "^1.7.1",
-        "typed.js": "^1.1.1",
-        "waypoints": "^3.1.1",
-        "font-awesome": "~4.6.1"
-    },
-    "devDependencies": {},
-    "overrides":{
-        "font-awesome": {
-            "main": [
-                "css/font-awesome.css"
-            ]
-        }
-    },
-    "appPath": "app",
-    "moduleName": "navarroApp"
+  "name": "navarro",
+  "version": "0.0.0",
+  "dependencies": {
+    "angular": "^1.5.3",
+    "angular-ui-router": "^1.0.0",
+    "animateCSS": "^1.2.1",
+    "bootstrap-sass-official": "^3.2.0",
+    "ngSmoothScroll": "^1.7.1",
+    "typed.js": "^1.1.1",
+    "waypoints": "^3.1.1",
+    "font-awesome": "~4.6.1",
+    "angular-parallax": "^0.0.2"
+  },
+  "devDependencies": {},
+  "overrides": {
+    "font-awesome": {
+      "main": [
+        "css/font-awesome.css"
+      ]
+    }
+  },
+  "appPath": "app",
+  "moduleName": "navarroApp"
 }

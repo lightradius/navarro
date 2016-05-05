@@ -1,9 +1,10 @@
 #contact {
-    background-image: radial-gradient(
-        circle at bottom right,
-        $light-purple,
-        $dark-purple
-    );
+    // background-image: radial-gradient(
+    //     circle at bottom right,
+    //     $light-purple,
+    //     $dark-purple
+    // );
+
     ul {
         list-style: none;
         padding: 0;
@@ -14,4 +15,8 @@
             font-weight: bold;
         }
     }
+}
+.parallax-container {
+    min-height: 400px;
+    background: transparent;
 }
