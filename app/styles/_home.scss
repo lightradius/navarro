@@ -10,6 +10,7 @@
 
     #splash {
         position: absolute;
+        z-index: 2;
         top: 50%;
         padding-bottom: 50px;
         transform: translateY(-50%);
@@ -41,4 +42,13 @@
           color: white;
         }
     }
+}
+
+.grid {
+    height: 850px;
+    position: absolute;
+    background-image: url(../assets/img/pattern.png);
+    background-repeat: repeat;
+    width: 100%;
+    z-index: 1;
 }

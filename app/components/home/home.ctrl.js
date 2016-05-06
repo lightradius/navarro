@@ -51,9 +51,15 @@
             if (rand < 0.02) {
                 strings = ["Stop poking me^100!"]
             } else if ( rand < 0.1 ) {
-                strings = ["Stop it^100!"]
+                strings = ["Stop it!"]
+            } else if ( rand < 0.2 ) {
+                strings = ["Stop!"]
+            } else if ( rand < 0.3 ) {
+                strings = ["No!"]
+            } else if ( rand < 0.5 ) {
+                strings = ["Ow!"]
             } else {
-                strings = ["Ouch^100!"];
+                strings = ["Ouch!"];
             }
 
             vm.type( {

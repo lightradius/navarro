@@ -3,18 +3,12 @@
     #home, .grid {
         height: 700px;
     }
-    h2 {
-        font-size: 70px;
-    }
 }
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
     #home, .grid {
         height: 600px;
-    }
-    h2 {
-        font-size: 50px;
     }
 }
 
@@ -23,16 +17,13 @@
     #home, .grid {
         height: 540px;
     }
-    h2 {
-        font-size: 40px;
-    }
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
-    h2 {
-        font-size: 30px;
-    }
+    // h2 {
+    //     font-size: 30px;
+    // }
 }
 
 /* Custom, iPhone Retina */

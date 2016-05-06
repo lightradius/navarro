@@ -1,18 +1,29 @@
 #contact {
+    text-align: center;
     // background-image: radial-gradient(
     //     circle at bottom right,
     //     $light-purple,
     //     $dark-purple
     // );
+    h1 {
+        text-shadow: 1px 1px 0 grey;
+    }
 
     ul {
         list-style: none;
         padding: 0;
         li {
-            padding: 18px 0;
+            display: inline-block;
+            padding: 24px;
             font-family: Orbitron;
             font-size: 24px;
             font-weight: bold;
+            a {
+                color: $light-purple;
+                &:hover {
+                    color: $secondary;
+                }
+            }
         }
     }
 }

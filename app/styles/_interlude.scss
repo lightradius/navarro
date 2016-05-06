@@ -1,14 +1,17 @@
+$arrow-size: 54px;
+
 .interlude {
-    top: -36px;
+    top: -$arrow-size;
     background-color: $light-background;
-    height: 36px;
+    height: $arrow-size;
     width: 50%;
     position: relative;
+    z-index: 2;
     &.left {
-        right: 36px !important;
+        right: $arrow-size !important;
     }
     &.right {
-        right: -36px !important;
+        right: -$arrow-size !important;
     }
 }
 .interlude.right:before {
@@ -17,13 +20,13 @@
     font-size: 0;
     width: 0;
     height: 0;
-    border-top: 18px solid transparent;
-    border-bottom: 18px solid $light-background;
-    border-left: 18px solid transparent;
-    border-right: 18px solid $light-background;
+    border-top: $arrow-size/2 solid transparent;
+    border-bottom: $arrow-size/2 solid $light-background;
+    border-left: $arrow-size/2 solid transparent;
+    border-right: $arrow-size/2 solid $light-background;
     position: absolute;
     top: 0;
-    left: -36px;
+    left: -$arrow-size;
 }
 .interlude.left:after {
     content: '';
@@ -31,11 +34,11 @@
     font-size: 0;
     width: 0;
     height: 0;
-    border-top: 18px solid transparent;
-    border-bottom: 18px solid $light-background;
-    border-left: 18px solid $light-background;
-    border-right: 18px solid transparent;
+    border-top: $arrow-size/2 solid transparent;
+    border-bottom: $arrow-size/2 solid $light-background;
+    border-left: $arrow-size/2 solid $light-background;
+    border-right: $arrow-size/2 solid transparent;
     position: absolute;
     top: 0;
-    right: -36px;
+    right: -$arrow-size;
 }
