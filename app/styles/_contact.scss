@@ -16,11 +16,11 @@
         padding: 0;
         li {
             // display: inline-block;
-            letter-spacing: -8px;
+            letter-spacing: -2px;
             font-size: 80px;
             a {
                 text-decoration: none;
-                color: white;
+                // color: white;
                 &:hover {
                     color: $secondary;
                 }
