@@ -21,5 +21,8 @@
     }
   },
   "appPath": "app",
-  "moduleName": "navarroApp"
+  "moduleName": "navarroApp",
+  "resolutions": {
+    "angular": "1.4.3"
+  }
 }
