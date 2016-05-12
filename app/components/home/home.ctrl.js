@@ -7,75 +7,39 @@
 
     Controller.$inject = ['$anchorScroll', '$location', '$rootScope', '$scope', '$state', 'httpFactory'];
 
-    function Controller($anchorScroll, $location, $rootScope, $scope, $state, httpFactory) {
+    function Controller( $anchorScroll, $location, $rootScope, $scope, $state, httpFactory ) {
 
         var vm = this;
+        var elem = $('<span class="typed"></span>');
 
         var idleTime = 0;
 
         function timerIncrement() {
             idleTime = idleTime + 1;
-            if (idleTime > 60 * 5) { // 5 minutes
-                console.log('still there?');
+            if ( idleTime === ( 5 * 60 ) ) { // 5 minutes
+                $('.typed').remove();
+                $('.typed-cursor').remove();
+                $('.lead-text').append(elem);
+                vm.type( {
+                    strings: ['Still there?'],
+                    startDelay: 0,
+                    typeSpeed: 0,
+                    backDelay: 1200,
+                    backSpeed: 30,
+                    cursorChar: '_'
+                } );
             }
         }
 
         vm.dollars = 0;
         // vm.bounce = bounce;
         vm.type = type;
-        // vm.typeMo = typeMo;
         vm.reset = reset;
         vm.dollarClick = dollarClick;
         vm.zero = zero;
         vm.remove = remove;
 
         // vm.colorize = colorize;
-
-        vm.scrollTo = function( id ) {
-            // console.log('scroll called');
-
-            // if  ( $(window).scrollTop() + 1 >= $(document).height() - $(window).height()){
-            //     console.log('Scrolling to %s', id);
-            //     $location.hash(id);
-            //     $anchorScroll();
-            // }
-        }
-
-        vm.dollarClick = function() {
-            vm.dollars++;
-            console.log('Dollars: %s', vm.dollars);
-            var elem = $('<span class="typed"></span>');
-            let strings;
-
-            $('.typed').remove();
-            $('.typed-cursor').remove();
-            $('.lead-text').append(elem);
-
-            let rand = Math.random();
-
-            if (rand < 0.02) {
-                strings = ["Stop poking me^100!"]
-            } else if ( rand < 0.1 ) {
-                strings = ["Stop it!"]
-            } else if ( rand < 0.2 ) {
-                strings = ["Stop!"]
-            } else if ( rand < 0.3 ) {
-                strings = ["No!"]
-            } else if ( rand < 0.5 ) {
-                strings = ["Ow!"]
-            } else {
-                strings = ["Ouch!"];
-            }
-
-            vm.type( {
-                strings: strings,
-                startDelay: 0,
-                typeSpeed: 0,
-                backDelay: 1200,
-                backSpeed: 30,
-                cursorChar: '_'
-            } );
-        }
 
         activate();
 
@@ -109,6 +73,41 @@
 
         function remove() {
             $('#achievement').fadeOut();
+        }
+
+        function dollarClick() {
+            vm.dollars++;
+            console.log('Dollars: %s', vm.dollars);
+            let strings;
+
+            $('.typed').remove();
+            $('.typed-cursor').remove();
+            $('.lead-text').append(elem);
+
+            let rand = Math.random();
+
+            if (rand < 0.02) {
+                strings = ["Stop poking me^100!"]
+            } else if ( rand < 0.1 ) {
+                strings = ["Stop it!"]
+            } else if ( rand < 0.2 ) {
+                strings = ["Stop!"]
+            } else if ( rand < 0.3 ) {
+                strings = ["No!"]
+            } else if ( rand < 0.5 ) {
+                strings = ["Ow!"]
+            } else {
+                strings = ["Ouch!"];
+            }
+
+            vm.type( {
+                strings: strings,
+                startDelay: 0,
+                typeSpeed: 0,
+                backDelay: 1200,
+                backSpeed: 30,
+                cursorChar: '_'
+            } );
         }
 
         function getStrings() {
@@ -158,15 +157,6 @@
             var color = 23;
 
             $(elem).css('background-color', color);
-        }
-
-        function dollarClick() {
-            var elem = $('<span class="typed"></span>');
-
-            $('.typed').remove();
-            $('.typed-cursor').remove();
-            $('.lead-text').append(elem);
-            vm.typeMo();
         }
 
         function randomize() {
