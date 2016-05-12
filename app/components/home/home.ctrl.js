@@ -30,10 +30,14 @@
 
         // vm.colorize = colorize;
 
-        vm.scrollTo = function(id) {
-            console.log('Scrolling to %s', id);
-            $location.hash(id);
-            $anchorScroll();
+        vm.scrollTo = function( id ) {
+            // console.log('scroll called');
+
+            // if  ( $(window).scrollTop() + 1 >= $(document).height() - $(window).height()){
+            //     console.log('Scrolling to %s', id);
+            //     $location.hash(id);
+            //     $anchorScroll();
+            // }
         }
 
         vm.dollarClick = function() {
