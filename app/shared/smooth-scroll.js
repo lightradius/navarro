@@ -159,7 +159,6 @@
 		};
 	}]);
 
-
 	// Scrolls to a specified element ID when this element is clicked
 	module.directive('scrollTo', ['smoothScroll', function(smoothScroll) {
 		return {

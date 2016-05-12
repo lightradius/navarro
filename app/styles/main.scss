@@ -108,15 +108,23 @@ a:hover {
 }
 
 .achievement {
-    height: 100px;
+    height: 80px;
     width: 300px;
-    background-color: white;
-    border: 8px solid Indigo;
-    position: absolute;
-    top: 8px;
-    left: 9px;
-    z-index: 999px;
-    display: none;
+    background-color: $light-purple;
+    border: 2px solid Indigo;
+    position: fixed;
+    bottom: 9px;
+    right: 9px;
+    z-index: 9999;
+    display: block;
+    .frame {
+        height: 68px;
+        width: 68px;
+        margin: 4px;
+        background-color: white;
+        float: right;
+        border: 2px solid $secondary;
+    }
 }
 
 @import "media-queries";
