@@ -62,7 +62,7 @@ a:hover {
 }
 
 .box-shadow {
-    box-shadow: 0 2px 0 $light-purple;
+    box-shadow: 0 2px 0 #2E0854;
 }
 
 .section {
@@ -107,7 +107,7 @@ a:hover {
     cursor: pointer;
 }
 
-.achievement {
+#achievement {
     height: 80px;
     width: 300px;
     background-color: $light-purple;
@@ -122,6 +122,13 @@ a:hover {
         cursor: pointer;
         font-size: 1.2em;
         margin: 4px;
+    }
+    .text {
+        font-family: Orbitron;
+        margin-left: 88px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
     }
     .frame {
         height: 68px;

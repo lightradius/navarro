@@ -27,6 +27,7 @@
         vm.reset = reset;
         vm.dollarClick = dollarClick;
         vm.zero = zero;
+        vm.remove = remove;
 
         // vm.colorize = colorize;
 
@@ -106,6 +107,9 @@
             });
         }
 
+        function remove() {
+            $('#achievement').fadeOut();
+        }
 
         function getStrings() {
             return httpFactory.get( 'strings.json' )
