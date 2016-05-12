@@ -111,14 +111,12 @@
 
 
 	// Expose the library in a factory
-	//
 	module.factory('smoothScroll', function() {
 		return smoothScroll;
 	});
 
 
 	// Scrolls the window to this element, optionally validating an expression
-	//
 	module.directive('smoothScroll', ['smoothScroll', function(smoothScroll) {
 		return {
 			restrict: 'A',
@@ -163,7 +161,6 @@
 
 
 	// Scrolls to a specified element ID when this element is clicked
-	//
 	module.directive('scrollTo', ['smoothScroll', function(smoothScroll) {
 		return {
 			restrict: 'A',
