@@ -10,13 +10,15 @@
     function Controller( $anchorScroll, $location, $rootScope, $scope, $state, httpFactory ) {
 
         var vm = this;
+        var flag = 0;
         var elem = $('<span class="typed"></span>');
 
         var idleTime = 0;
 
         function timerIncrement() {
             idleTime = idleTime + 1;
-            if ( idleTime === ( 5 * 60 ) ) { // 5 minutes
+            if ( idleTime === ( 5 * 60 ) && !flag ) { // 5 minutes
+                flag++;
                 $('.typed').remove();
                 $('.typed-cursor').remove();
                 $('.lead-text').append(elem);
