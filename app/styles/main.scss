@@ -117,12 +117,17 @@ a:hover {
     right: 9px;
     z-index: 9999;
     display: block;
+    .fa {
+        cursor: pointer;
+        font-size: 1.2em;
+        margin: 4px;
+    }
     .frame {
         height: 68px;
         width: 68px;
         margin: 4px;
         background-color: white;
-        float: right;
+        float: left;
         border: 2px solid $secondary;
     }
 }
