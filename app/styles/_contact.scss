@@ -2,12 +2,15 @@
     font-family: Open Sans;
     font-weight: 800;
     text-transform: uppercase;
+    background-color: #e9e6ee;
     // background-image: radial-gradient(
     //     circle at bottom right,
     //     $light-purple,
     //     $dark-purple
     // );
-    h1 {
+    h1, h2, h3 {
+        // text-align: center;
+        color: $slate-blue;
         text-shadow: 1px 1px 0 grey;
     }
 
@@ -17,7 +20,7 @@
         li {
             // display: inline-block;
             letter-spacing: -2px;
-            font-size: 80px;
+            font-size: 2em;
             a {
                 text-decoration: none;
                 // color: white;
