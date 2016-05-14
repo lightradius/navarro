@@ -25,29 +25,35 @@
         }
     }
 
-    Controller.$inject = ['$scope'];
+    Controller.$inject = ['httpFactory'];
 
     /* @ngInject */
-    function Controller($scope) {
+    function Controller(httpFactory) {
         var vm = this;
+        vm.techs = [];
+
+        vm.data = [
+          {text: "Lorem", weight: 15, link: "https://google.com"}, //if your tag has a link.
+          {text: "Ipsum", weight: 9},
+          {text: "Dolor", weight: 6},
+          {text: "Sit", weight: 7},
+          {text: "Amet", weight: 5}
+          // ...as many words as you want
+      ];
 
         activate();
 
         function activate() {
             console.log('about section loaded');
+            getTechs();
+        }
 
-            let draw = 7;
-            let deck = 60;
-            let mulligan = 2;
-
-            for ( let i = 0, mulligan; i < mulligan; i++ ) {
-                console.log(i);
-                for ( let j = 0, draw; j < ( draw - i ); j++ ) {
-                    let newProb = ( ( deck - j + 1 ) / ( deck - j + 1 ) );
-                    let prob = prob ? prob * newProb : newProb;
-                    console.log( prob );
-                }
-            }
+        function getTechs() {
+            return httpFactory.get( 'tech.json' )
+            .then(function( data ) {
+                console.log(data);
+                vm.techs = data;
+            })
         }
     }
 })();

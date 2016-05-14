@@ -43,5 +43,9 @@
                 <div class="btn btn-default">Have a project? Get in touch.</div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-3" ng-repeat="tech in vm.techs"><h3>{{tech}}</h3></div>
+            <ng-tag-cloud cloud-width="250" cloud-height="250" cloud-data="vm.data"></ng-tag-cloud> <!-- default height and width is 300px -->
+        </div>
     </div>
 </div>

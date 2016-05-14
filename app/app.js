@@ -16,6 +16,7 @@
         .module('navarroApp', [
             'ui.router',
             'smoothScroll',
+            'ngTagCloud',
             'angular-parallax'
         ]);
 })();
